@@ -1,6 +1,6 @@
 ---
 title: friends
-date: 2019-07-19 16:42:10
+date: 2020-06-01 00:00:00
 type: "friends"
 layout: "friends"
 ---
@@ -13,7 +13,7 @@ layout: "friends"
 * **头像：**你的头像地址
 
 例如我的博客友链，大家可以加到自己博客里哦：
-* **名称：**godweiyang
-* **地址：**https://godweiyang.com
-* **简介：**公众号【算法码上来】，分享深度学习与NLP算法
-* **头像：**https://godweiyang.com/medias/avatars/avatar.jpg
+* **名称：**TheAnswer
+* **地址：**https://angelotheanswer.github.io
+* **简介：**网络安全，伴你同行！
+* **头像：**https://angelotheanswer.github.io/medias/avatars/avatar.jpg

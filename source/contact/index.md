@@ -1,12 +1,12 @@
 ---
 title: contact
-date: 2019-07-26 17:17:02
+date: 2020-06-01 00:00:00
 type: "contact"
 layout: "contact"
 ---
 
 # 欢迎留言
-大家有任何问题，都可以在评论区给我留言，或者加 QQ 技术交流群【群号：864832264】。
+大家有任何问题，都可以在评论区给我留言。
 
 我很忙啦，如果不是很麻烦的问题就直接在评论区留言啦。
 
@@ -18,7 +18,7 @@ layout: "contact"
 * **头像：**你的头像地址
 
 例如我的博客友链，大家可以加到自己博客里哦：
-* **名称：**godweiyang
-* **地址：**https://godweiyang.com
-* **简介：**公众号【算法码上来】，分享深度学习与NLP算法
-* **头像：**https://godweiyang.com/medias/avatars/avatar.jpg
+* **名称：**TheAnswer
+* **地址：**https://angelotheanswer.github.io
+* **简介：**网络安全，伴你同行！
+* **头像：**https://angelotheanswer.github.io/photo/isme.png
