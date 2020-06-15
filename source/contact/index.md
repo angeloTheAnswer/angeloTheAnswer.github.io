@@ -21,4 +21,4 @@ layout: "contact"
 * **名称：**TheAnswer
 * **地址：**https://angelotheanswer.github.io
 * **简介：**网络安全，伴你同行！
-* **头像：**https://angelotheanswer.github.io/photo/isme.png
+* **头像：**https://angelotheanswer.github.io/medias/avatars/avatar.jpg
