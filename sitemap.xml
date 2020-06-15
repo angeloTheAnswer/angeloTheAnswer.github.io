@@ -2,16 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://yoursite.com/2020/02/16/wenzhangmoban/</loc>
+    <loc>http://yoursite.com/contact/index.html</loc>
     
-    <lastmod>2020-06-15T10:06:06.589Z</lastmod>
+    <lastmod>2020-06-15T14:09:01.876Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://yoursite.com/friends/index.html</loc>
     
-    <lastmod>2020-06-15T03:36:37.762Z</lastmod>
+    <lastmod>2020-06-15T14:08:25.223Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/02/16/wenzhangmoban/</loc>
+    
+    <lastmod>2020-06-15T10:06:06.589Z</lastmod>
     
   </url>
   
@@ -26,13 +33,6 @@
     <loc>http://yoursite.com/tags/index.html</loc>
     
     <lastmod>2020-06-14T13:22:46.087Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/contact/index.html</loc>
-    
-    <lastmod>2020-06-14T13:11:15.725Z</lastmod>
     
   </url>
   
