@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>TheAnswer的博客</title>
   
-  <subtitle>安全视角</subtitle>
+  <subtitle>Zero and one</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-06-15T10:06:06.589Z</updated>
+  <updated>2020-09-15T08:04:31.145Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Linux 与 Shell</title>
+    <link href="http://yoursite.com/2020/02/18/article-linux/"/>
+    <id>http://yoursite.com/2020/02/18/article-linux/</id>
+    <published>2020-02-18T06:24:27.000Z</published>
+    <updated>2020-09-15T08:04:31.145Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;网络安全&lt;/p&gt;
+&lt;h2 id=&quot;操作系统简史&quot;&gt;&lt;a href=&quot;#操作系统简史&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Linux" scheme="http://yoursite.com/categories/Linux/"/>
+    
+    
+      <category term="Linux" scheme="http://yoursite.com/tags/Linux/"/>
+    
+  </entry>
   
   <entry>
     <title>网络安全</title>
