@@ -485,14 +485,14 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.3k
+                    2.1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    5 分
+                    9 分
                 </div>
                 
                 
@@ -515,14 +515,17 @@
 <p><strong>Bash的特点：</strong> </p>
 <p><strong>•命令历史、命令补全</strong><br><strong>•管道、重定向</strong><br><strong>•命令别名</strong><br><strong>•命令行编辑</strong><br><strong>•命令行展开</strong><br><strong>•文件名通配</strong><br><strong>•变量</strong><br><strong>•编程</strong></p>
 <h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><h3 id="文件系统管理命令"><a href="#文件系统管理命令" class="headerlink" title="文件系统管理命令"></a>文件系统管理命令</h3><p>对文件及目录的管理操作包括新建、浏览、编辑、修改、删除等。</p>
-<h4 id="ls命令"><a href="#ls命令" class="headerlink" title="ls命令"></a>ls命令</h4><p>ls命令：显示文件信息命令<br>功能：ls命令显示关于文件的信息，其中的文件包括任何类型的文件和目录。<br>用法1：<code>ls</code></p>
+<h4 id="ls命令"><a href="#ls命令" class="headerlink" title="ls命令"></a>ls命令</h4><p>ls命令：显示文件信息命令</p>
+<p>功能：ls命令显示关于文件的信息，其中的文件包括任何类型的文件和目录。</p>
+<p>用法1：<code>ls</code></p>
 <pre><code>[root@TheAnswer test]# ls
 a  a.txt</code></pre><p>test文件夹下使用ls命令可以看到有一个a文件夹和一个a.txt文件</p>
 <p>用法2：<code>ls -l</code><br>该命令显示文件或者目录下的文件的详细信息，包括文件类型及权限、连接数、文件所有者及所有者所属的组、文件大小、访问日期、时间、名称。</p>
-<pre><code>[root@TheAnswer test]# ls -l
+<pre class="line-numbers language-sh"><code class="language-sh">[root@TheAnswer test]# ls -l
 总用量 8
 drwxr-xr-x 3 root root 4096 2月  11 20:36 a
--rw-r--r-- 1 root root   14 2月  11 20:43 a.txt</code></pre><p>小提示：每一列的含义<br><img src="lsjieshitu.png" alt="Linux"></p>
+-rw-r--r-- 1 root root   14 2月  11 20:43 a.txt<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p>小提示：每一列的含义<br><img src="lsjieshitu.png" alt="Linux"></p>
 <p><strong>”标号1“：</strong></p>
 <table>
 <thead>
@@ -575,12 +578,13 @@ drwxr-xr-x 3 root root 4096 2月  11 20:36 a
 <p><strong>”标号11“：</strong>文件后缀</p>
 <p>用法3：<code>ls -l [文件包含的字符]*</code></p>
 <p>test目录下文件如下 a，a123，a.txt，bcd，下面使用ls -l a* 这个命令。</p>
-<pre><code>[root@TheAnswer test]# ls -l
+<pre class="line-numbers language-sh"><code class="language-sh">[root@TheAnswer test]# ls -l
 总用量 16
 drwxr-xr-x 3 root root 4096 2月  11 20:36 a
 drwxr-xr-x 2 root root 4096 2月  11 18:05 a123
 -rw-r--r-- 1 root root   14 2月  11 17:43 a.txt
-drwxr-xr-x 2 root root 4096 2月  11 18:05 bcd</code></pre><p>ls -l a* 该命令是显示当前目录下以a开头的文件或目录的详细信息。*是文件名称的匹配符，表示可以匹配任意字符串。</p>
+drwxr-xr-x 2 root root 4096 2月  11 18:05 bcd<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>ls -l a* 该命令是显示当前目录下以a开头的文件或目录的详细信息。*是文件名称的匹配符，表示可以匹配任意字符串。</p>
 <pre><code>[root@TheAnswer test]# ls -l a*
 -rw-r--r-- 1 root root   14 2月  11 17:43 a.txt
 
@@ -590,7 +594,7 @@ drwxr-xr-x 3 root root 4096 2月  11 20:39 b
 
 a123:
 总用量 0</code></pre><p>用法4：<code>ls -a 、ls -al</code><br>ls -a 会把隐藏文件显示出来，如果要想看到文件的信息的话就可以使用 ls -al。</p>
-<pre><code>[root@TheAnswer test]# ls -a
+<pre class="line-numbers language-sh"><code class="language-sh">[root@TheAnswer test]# ls -a
 .  ..  a  a123  .abc.txt  a.txt  bcd
 
 [root@TheAnswer test]# ls -al
@@ -601,7 +605,100 @@ drwxr-xr-x  3 root root 4096 2月  11 20:36 a
 drwxr-xr-x  2 root root 4096 2月  11 18:05 a123
 -rw-r--r--  1 root root    0 2月  11 18:31 .abc.txt
 -rw-r--r--  1 root root   14 2月  11 17:43 a.txt
-drwxr-xr-x  2 root root 4096 2月  11 18:05 bcd</code></pre><p><strong>百度一下</strong><br><a href="https://www.baidu.com" target="_blank" rel="noopener">https://www.baidu.com</a></p>
+drwxr-xr-x  2 root root 4096 2月  11 18:05 bcd<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="pwd命令"><a href="#pwd命令" class="headerlink" title="pwd命令"></a>pwd命令</h4><p>pwd命令：显示用户当前工作目录，</p>
+<p>功能：显示当前目录在文件系统层次中的位置。</p>
+<p>用法：<code>pwd</code></p>
+<p>先进入到一个工作目录下</p>
+<pre class="line-numbers language-sh"><code class="language-sh">[root@TheAnswer ~]# cd test/a
+[root@TheAnswer a]#<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>然后输入pwd</p>
+<pre class="line-numbers language-sh"><code class="language-sh">[root@TheAnswer ~]# cd test/a
+[root@TheAnswer a]#<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-sh"><code class="language-sh">[root@TheAnswer a]# pwd
+/root/test/a<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<h4 id="目录管理命令-mkdir-rmdir"><a href="#目录管理命令-mkdir-rmdir" class="headerlink" title="目录管理命令-mkdir/rmdir"></a>目录管理命令-mkdir/rmdir</h4><p>语法：<br>mkdir[参数] 目录名称<br>rmdir[参数] 目录名称</p>
+<p>功能：创建目录和删除目录。mkdir命令表示在当前目录中建立一个新目录，rmdir表示删除指定的目录。<br>-p表示递归删除或者创建目录。</p>
+<p>用法：<code>mkdir/rmdir -p 目录</code></p>
+<p>当前目录创建目录/删除目录</p>
+<pre class="line-numbers language-sh"><code class="language-sh">[root@TheAnswer ~]# cd test/a
+[root@TheAnswer a]#
+[root@TheAnswer test]# ls
+a  a123  a.txt  bcd
+[root@TheAnswer test]# mkdir test1
+[root@TheAnswer test]# ls
+a  a123  a.txt  bcd  test1
+[root@TheAnswer test]# rmdir test1
+[root@TheAnswer test]# ls
+a  a123  a.txt  bcd<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>递归创建/删除目录</p>
+<pre class="line-numbers language-sh"><code class="language-sh">[root@TheAnswer test]# mkdir -p test1/test2/test3
+[root@TheAnswer test]# cd test1/test2/test3
+[root@TheAnswer test3]# pwd
+/root/test/test1/test2/test3
+[root@TheAnswer test]# rmdir -p test1/test2/test3
+[root@TheAnswer test]# ls
+a  a123  a.txt  bcd<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="删除文件工具-rm"><a href="#删除文件工具-rm" class="headerlink" title="删除文件工具-rm"></a>删除文件工具-rm</h4><p>语法：<br>rm[参数] file1 file2 ……<br>rm[参数] dir1 dir2 dir ……</p>
+<p>功能：rm用来删除一个或多个文件的工具。并且可以用于删除非空目录。<br>也可以使用参数<code>-rf</code>强制删除一个非空目录。</p>
+<p>参数：<br><code>-f</code> 表示不显示警告或提示直接删除。<br><code>-i</code> 表示删除文件时显示警告信息并提示是否删除。<br><code>-r</code>或<code>-R</code>表示可以递归删除整个目录包括子目录及目录下的所有文件。</p>
+<p>用法：<code>rm -i file</code></p>
+<p>删除文件</p>
+<p>先用<code>touch b.txt </code>创建一个文件</p>
+<pre class="line-numbers language-sh"><code class="language-sh">[root@TheAnswer test]# touch b.txt
+[root@TheAnswer test]# ls
+a  a123  a.txt  bcd  b.txt
+[root@TheAnswer test]# rm -i b.txt
+rm：是否删除普通空文件 "b.txt"？y
+[root@TheAnswer test]# ls
+a  a123  a.txt  bcd<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>用法：<code>rm -ir dir</code></p>
+<p>删除目录及所有下级目录和文件</p>
+<p>先用<code>touch b.txt </code>创建一个文件</p>
+<pre class="line-numbers language-sh"><code class="language-sh">[root@TheAnswer test]# ls
+a  a123  a.txt  bcd
+[root@TheAnswer test]# rmdir a
+rmdir: 删除 "a" 失败: 目录非空
+[root@TheAnswer test]# rm -ir a
+rm：是否进入目录"a"? y
+rm：是否进入目录"a/b"? y
+rm：是否进入目录"a/b/c"? y
+rm：是否进入目录"a/b/c/d"? y
+rm：是否进入目录"a/b/c/d/e"? y
+rm：是否删除普通空文件 "a/b/c/d/e/e.txt"？y
+rm：是否删除目录 "a/b/c/d/e"？y
+rm：是否删除目录 "a/b/c/d"？y
+rm：是否删除目录 "a/b/c"？y
+rm：是否删除目录 "a/b"？y
+rm：是否删除目录 "a"？y<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>用法：<code>rm -rf dir</code></p>
+<p>不需要提示删除目录及所有下级目录和文件</p>
+<h4 id="文件名修改命令-mv"><a href="#文件名修改命令-mv" class="headerlink" title="文件名修改命令-mv"></a>文件名修改命令-mv</h4><p>语法：<br>mv 原文件名或目录名新文件名或目录名</p>
+<p>功能：文件更名或搬移。</p>
+<p>用法：<code>mv filename1 filename2</code></p>
+<p>将名称为filename1的文件改名为filename2并删除原文件。</p>
+<pre class="line-numbers language-sh"><code class="language-sh">[root@TheAnswer test]# ls
+a123  a.txt  bcd
+[root@TheAnswer test]# mv a.txt abcd.txt
+[root@TheAnswer test]# ls
+a123  abcd.txt  bcd
+[root@TheAnswer test]#<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>用法：<code>mv filename1 path/filename2</code></p>
+<p>将名称为filename1的文件移动到path路径下并改名为filename2并删除原文件。</p>
+<pre class="line-numbers language-sh"><code class="language-sh">[root@izbp14yziiuvu2qh2n015xz test]# ls
+a123  a.txt  bcd
+[root@izbp14yziiuvu2qh2n015xz test]# mv a.txt abcd.txt
+[root@izbp14yziiuvu2qh2n015xz test]# ls
+a123  abcd.txt  bcd
+[root@izbp14yziiuvu2qh2n015xz test]# ls
+a123  abcd.txt  bcd
+[root@izbp14yziiuvu2qh2n015xz test]# mv abcd.txt bcd/bcd.txt
+[root@izbp14yziiuvu2qh2n015xz test]# ls
+a123  bcd
+[root@izbp14yziiuvu2qh2n015xz test]# cd bcd
+[root@izbp14yziiuvu2qh2n015xz bcd]# ls
+bcd.txt<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><strong>百度一下</strong><br><a href="https://www.baidu.com" target="_blank" rel="noopener">https://www.baidu.com</a></p>
 
             </div>
             <hr />
@@ -1348,7 +1445,7 @@ drwxr-xr-x  2 root root 4096 2月  11 18:05 bcd</code></pre><p><strong>百度一
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">1.6k</span>
+            <span class="white-color">2.5k</span>
             
 
             <br>
