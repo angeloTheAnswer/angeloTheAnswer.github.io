@@ -330,7 +330,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/27.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -485,14 +485,14 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.1k
+                    2.7k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    9 分
+                    11 分
                 </div>
                 
                 
@@ -718,6 +718,115 @@ bcd.txt<span aria-hidden="true" class="line-numbers-rows"><span></span><span></s
 <td align="center">小于等于</td>
 </tr>
 </tbody></table>
+<h3 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h3><h4 id="函数语法"><a href="#函数语法" class="headerlink" title="函数语法"></a>函数语法</h4><p><code>[function] name(){函数体}[重定向]</code><br>其中function关键字和重定向是可选的</p>
+<h4 id="函数使用"><a href="#函数使用" class="headerlink" title="函数使用"></a>函数使用</h4><p><code>name 参数列表</code></p>
+<h4 id="写一个max函数返回3个参数中的最大值"><a href="#写一个max函数返回3个参数中的最大值" class="headerlink" title="写一个max函数返回3个参数中的最大值"></a>写一个max函数返回3个参数中的最大值</h4><pre class="line-numbers language-sh"><code class="language-sh">#!/bin/bash
+
+function max( )
+{
+echo $# $1 $2 $3
+if [ $# -ne 3 ];then
+echo "usage:max p1 p2 p3"
+exit 1
+fi
+max=$1
+if [ max -lt $2 ];then
+max=$2
+fi
+if [ max -lt $3 ];then
+max=$3
+fi
+return max
+}
+max 1 2 3
+echo "the max number of 1 2 3 is : $?"
+exit
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>执行上面程序报错</p>
+<pre class="line-numbers language-sh"><code class="language-sh">./max.sh: 第 11 行:[: max: 期待整数表达式
+./max.sh: 第 14 行:[: max: 期待整数表达式
+./max.sh: 第 17 行:return: max: 需要数字参数
+the max number of 1 2 3 is : 255<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p>可能是max 有歧义 用 ${max} 或者 $max 代替max成功了</p>
+<pre class="line-numbers language-sh"><code class="language-sh">#!/bin/bash
+
+function max( )
+{
+echo $# $1 $2 $3
+if [ $# -ne 3 ];then
+echo "usage:max p1 p2 p3"
+exit 1
+fi
+max=$1
+if [ ${max} -lt $2 ];then
+max=$2
+fi
+if [ ${max} -lt $3 ];then
+max=$3
+fi
+return ${max}
+}
+max 1 2 3
+echo "the max number of 1 2 3 is : $?"
+exit<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>结果</p>
+<pre class="line-numbers language-sh"><code class="language-sh">the max number of 1 2 3 is : 3<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3 id><a href="#" class="headerlink" title="$?"></a>$?</h3><h4 id="获取上一个命令的退出状态"><a href="#获取上一个命令的退出状态" class="headerlink" title="获取上一个命令的退出状态"></a>获取上一个命令的退出状态</h4><pre class="line-numbers language-sh"><code class="language-sh">#!/bin/bash
+
+function max( )
+{
+if [ $# -ne 3 ];then
+echo "usage:max p1 p2 p3"
+exit 1
+fi
+max=$1
+if [ $max -lt $2 ];then
+max=$2
+fi
+if [ ${max} -lt $3 ];then
+max=$3
+fi
+return ${max}
+}
+max 1 2 28 4
+echo "the max number is : $?"
+exit<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>max.sh中max方法传进去4个参数，这个时候会退出脚本且状态为1</p>
+<pre class="line-numbers language-sh"><code class="language-sh">[root@izbp14yziiuvu2qh2n015xz test]# echo $?
+1<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<h4 id="获取函数的返回值"><a href="#获取函数的返回值" class="headerlink" title="获取函数的返回值"></a>获取函数的返回值</h4><pre class="line-numbers language-sh"><code class="language-sh">#!/bin/bash
+
+function max( )
+{
+if [ $# -ne 3 ];then
+echo "usage:max p1 p2 p3"
+exit 1
+fi
+max=$1
+if [ $max -lt $2 ];then
+max=$2
+fi
+if [ ${max} -lt $3 ];then
+max=$3
+fi
+return ${max}
+}
+max 1 2 28 
+echo "the max number is : $?"
+exit<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>结果</p>
+<pre class="line-numbers language-sh"><code class="language-sh">the max number is : 28<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>把最大值得参数改为255</p>
+<p>结果</p>
+<pre class="line-numbers language-sh"><code class="language-sh">the max number is : 255<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>把最大值得参数改为256</p>
+<pre class="line-numbers language-sh"><code class="language-sh">the max number is : 0<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>这个是后$？获取值是0</p>
+<p>$?获取的返回值是0~255之前，超过255开始从0计算 也就是说 256 输出 0，257输出1，258输出2</p>
+<p>怎么获取返回值？</p>
+<p>用全局变量来获取</p>
+<p><code>$max</code></p>
+<p>注：在 Shell 函数中定义的变量默认也是全局变量，它和在函数外部定义变量拥有一样的效果</p>
 <p><strong>百度一下</strong><br><a href="https://www.baidu.com" target="_blank" rel="noopener">https://www.baidu.com</a></p>
 
             </div>
@@ -1211,7 +1320,7 @@ bcd.txt<span aria-hidden="true" class="line-numbers-rows"><span></span><span></s
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="SQL固定分组统计">
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="SQL固定分组统计">
                         
                         <span class="card-title">SQL固定分组统计</span>
                     </div>
@@ -1260,7 +1369,7 @@ bcd.txt<span aria-hidden="true" class="line-numbers-rows"><span></span><span></s
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="网络安全">
+                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="网络安全">
                         
                         <span class="card-title">网络安全</span>
                     </div>
@@ -1465,7 +1574,7 @@ bcd.txt<span aria-hidden="true" class="line-numbers-rows"><span></span><span></s
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">2.5k</span>
+            <span class="white-color">3k</span>
             
 
             <br>
