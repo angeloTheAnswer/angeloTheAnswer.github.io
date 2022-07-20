@@ -112,7 +112,8 @@ theme: matery
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
 - type: git
-  repository: https://github.com/AngeloTheAnswer/AngeloTheAnswer.github.io
+  # repository: https://github.com/AngeloTheAnswer/AngeloTheAnswer.github.io.git
+  repository: git@github.com:angeloTheAnswer/angeloTheAnswer.github.io.git
     # coding: git@e.coding.net:godweiyang/godweiyang.git
   branch: master
 
