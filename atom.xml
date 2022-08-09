@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>TheAnswer的博客</title>
+  
+  <subtitle>Zero and one</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2022-07-22T05:49:03.232Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>TheAnswer</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>pytest接口自动化框架搭建</title>
+    <link href="http://yoursite.com/2021/06/13/pytest/"/>
+    <id>http://yoursite.com/2021/06/13/pytest/</id>
+    <published>2021-06-13T13:13:30.000Z</published>
+    <updated>2022-07-22T05:49:03.232Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;&lt;em&gt;眼泪不是我们的答案。拼搏才是我们的选择&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&quot;环境&quot;&gt;&lt;a href=&quot;#环境&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="pytest" scheme="http://yoursite.com/categories/pytest/"/>
+    
+    
+      <category term="python" scheme="http://yoursite.com/tags/python/"/>
+    
+      <category term="自动化" scheme="http://yoursite.com/tags/%E8%87%AA%E5%8A%A8%E5%8C%96/"/>
+    
+      <category term="pytest" scheme="http://yoursite.com/tags/pytest/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>work</title>
+    <link href="http://yoursite.com/2020/12/02/work/"/>
+    <id>http://yoursite.com/2020/12/02/work/</id>
+    <published>2020-12-02T03:13:33.000Z</published>
+    <updated>2022-07-22T05:26:56.579Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+      <category term="problem" scheme="http://yoursite.com/tags/problem/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>SQL固定分组统计</title>
+    <link href="http://yoursite.com/2020/02/20/mysql/"/>
+    <id>http://yoursite.com/2020/02/20/mysql/</id>
+    <published>2020-02-20T06:13:44.000Z</published>
+    <updated>2022-07-22T05:26:56.561Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;&lt;em&gt;不不要在夕阳西下时幻想，要在旭日东升时努力。&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&quot;问题&quot;&gt;&lt;a href=&quot;#问题&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="SQL" scheme="http://yoursite.com/categories/SQL/"/>
+    
+    
+      <category term="SQL" scheme="http://yoursite.com/tags/SQL/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linux 与 Shell</title>
+    <link href="http://yoursite.com/2020/02/18/article-title/"/>
+    <id>http://yoursite.com/2020/02/18/article-title/</id>
+    <published>2020-02-18T06:24:27.000Z</published>
+    <updated>2022-07-22T05:26:56.571Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;网络安全&lt;/p&gt;
+&lt;h2 id=&quot;操作系统简史&quot;&gt;&lt;a href=&quot;#操作系统简史&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Linux" scheme="http://yoursite.com/categories/Linux/"/>
+    
+    
+      <category term="Linux" scheme="http://yoursite.com/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linux 与 Shell</title>
+    <link href="http://yoursite.com/2020/02/18/article-linux/"/>
+    <id>http://yoursite.com/2020/02/18/article-linux/</id>
+    <published>2020-02-18T06:24:27.000Z</published>
+    <updated>2022-07-22T05:26:56.563Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;&lt;em&gt;不渴望能够一跃千里，只希望每天能够前进一步。&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&quot;操作系统简史&quot;&gt;&lt;a href=&quot;#操作系统简史&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Linux" scheme="http://yoursite.com/categories/Linux/"/>
+    
+    
+      <category term="Linux" scheme="http://yoursite.com/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>网络安全</title>
+    <link href="http://yoursite.com/2020/02/16/wenzhangmoban/"/>
+    <id>http://yoursite.com/2020/02/16/wenzhangmoban/</id>
+    <published>2020-02-16T07:09:23.000Z</published>
+    <updated>2022-07-22T05:26:56.578Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;网络安全&lt;/p&gt;
+&lt;h2 id=&quot;性质汇总&quot;&gt;&lt;a href=&quot;#性质汇总&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="网络安全" scheme="http://yoursite.com/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/"/>
+    
+    
+      <category term="网络安全" scheme="http://yoursite.com/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/"/>
+    
+  </entry>
+  
+</feed>
