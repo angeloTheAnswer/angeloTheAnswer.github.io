@@ -4,12 +4,15 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="Linux 与 Shell, TheAnswer">
+    <meta name="keywords" content="配置多个git, TheAnswer">
     <meta name="baidu-site-verification" content="fmlEuI34ir">
     <meta name="google-site-verification" content="yCy2azpds5XSuGZvis6OuA-XIGF5GuGpYRAaGfD6o48">
     <meta name="360-site-verification" content="b7c11a830ef90fd1464ad6206bb7b6e7">
-    <meta name="description" content="前言不渴望能够一跃千里，只希望每天能够前进一步。
-操作系统简史四个时代第一个时代是OS时代，这个时候操作系统才刚刚成型，最早是1973年由贝尔实验室开发的UNIX系统，以及1982年与1991年在UNIX系统基础上进行扩展定制的若干变种。第">
+    <meta name="description" content="生成SSH第一个账号生成ssh key
+ssh-keygen -t rsa -C &#34;your1@email.com&#34;
+第二个账号生成ssh key
+ssh-keygen -t rsa -C &#34;your2@email.com&#34;
+部署SSH K">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +20,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Linux 与 Shell | TheAnswer的博客</title>
+    <title>配置多个git | TheAnswer的博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -330,13 +333,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        Linux 与 Shell
+                        配置多个git
                     </div>
                 </div>
             </div>
@@ -447,8 +450,8 @@
                     
                     <div class="article-tag">
                         
-                        <a href="/tags/Linux/" target="_blank">
-                            <span class="chip bg-color">Linux</span>
+                        <a href="/tags/git/" target="_blank">
+                            <span class="chip bg-color">git</span>
                         </a>
                         
                     </div>
@@ -459,8 +462,8 @@
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                        <a href="/categories/Linux/" class="post-category" target="_blank">
-                            Linux
+                        <a href="/categories/git/" class="post-category" target="_blank">
+                            git
                         </a>
                         
                     </div>
@@ -471,7 +474,7 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-02-18
+                    2021-08-11
                 </div>
 
                 <div class="post-author info-break-policy">
@@ -485,14 +488,14 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.7k
+                    164
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    11 分
+                    1 分
                 </div>
                 
                 
@@ -508,326 +511,31 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p><em>不渴望能够一跃千里，只希望每天能够前进一步。</em></p>
-<h2 id="操作系统简史"><a href="#操作系统简史" class="headerlink" title="操作系统简史"></a>操作系统简史</h2><p>四个时代<br>第一个时代是OS时代，这个时候操作系统才刚刚成型，最早是1973年由贝尔实验室开发的UNIX系统，以及1982年与1991年在UNIX系统基础上进行扩展定制的若干变种。<br>第二个时代是PC时代，PC时代崛起于1975年，当年乔布斯开发了Apple系统，随后1980年，比尔盖茨开发了DOS系统，从这时起更多的人开始接触操作系统，个人计算机得以普及。<br>第三个时代是GUI时代，GUI时代的代表作是1979年乔布斯开发的Mac系统与1990年比尔盖茨开发的Windows系统，以及1994年的Linux系统，这三个系统影响了整个时代，一直到现在仍被广泛使用。<br>第四个时代是移动OS时代，随着移动互联网的发展，移动OS也变得越来越重要，在移动OS时代，最知名的是Google的Android系统，以及乔布斯的iOS系统。</p>
-<h2 id="Shell是什么"><a href="#Shell是什么" class="headerlink" title="Shell是什么"></a>Shell是什么</h2><p><img src="Linux.png" alt="Linux"><br>Shell是用户与内核交互操作的接口，它接收用户的命令然后传递给内核，内核执行命令并将执行结果通过Shell返回给用户。<br>Shell既是一种命令解释器，也是一种编程语言。Shell有很多种版本，主要的版本如下：<br>Bourne Shell，源于UNIX早期版本的Shell。<br>Bash，又名Bourne Again Shell，来自GUN项目，它是Linux主要的Shell。<br>Korn Shell，它是对Bourne Shell的发展。<br>C shell，是SUN公司Shell的BSD版本。</p>
-<h2 id="Bash是什么"><a href="#Bash是什么" class="headerlink" title="Bash是什么"></a>Bash是什么</h2><p>Bash是Shell的一种，在Linux中常用的Shell就是Bourne-Again shell（简称bash）。<br>Bash有很灵活和强大的编程接口，同时又有很友好的用户界面。</p>
-<p><strong>Bash的特点：</strong> </p>
-<p><strong>•命令历史、命令补全</strong><br><strong>•管道、重定向</strong><br><strong>•命令别名</strong><br><strong>•命令行编辑</strong><br><strong>•命令行展开</strong><br><strong>•文件名通配</strong><br><strong>•变量</strong><br><strong>•编程</strong></p>
-<h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><h3 id="文件系统管理命令"><a href="#文件系统管理命令" class="headerlink" title="文件系统管理命令"></a>文件系统管理命令</h3><p>对文件及目录的管理操作包括新建、浏览、编辑、修改、删除等。</p>
-<h4 id="ls命令"><a href="#ls命令" class="headerlink" title="ls命令"></a>ls命令</h4><p>ls命令：显示文件信息命令</p>
-<p>功能：ls命令显示关于文件的信息，其中的文件包括任何类型的文件和目录。</p>
-<p>用法1：<code>ls</code></p>
-<pre><code>[root@TheAnswer test]# ls
-a  a.txt</code></pre><p>test文件夹下使用ls命令可以看到有一个a文件夹和一个a.txt文件</p>
-<p>用法2：<code>ls -l</code><br>该命令显示文件或者目录下的文件的详细信息，包括文件类型及权限、连接数、文件所有者及所有者所属的组、文件大小、访问日期、时间、名称。</p>
-<pre class="line-numbers language-sh"><code class="language-sh">[root@TheAnswer test]# ls -l
-总用量 8
-drwxr-xr-x 3 root root 4096 2月  11 20:36 a
--rw-r--r-- 1 root root   14 2月  11 20:43 a.txt<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-<p>小提示：每一列的含义<br><img src="lsjieshitu.png" alt="Linux"></p>
-<p><strong>”标号1“：</strong></p>
-<table>
-<thead>
-<tr>
-<th align="center">-</th>
-<th align="center">d</th>
-<th align="center">p</th>
-<th align="center">l</th>
-<th align="center">b</th>
-<th align="center">c</th>
-<th align="center">s</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">普通文件</td>
-<td align="center">目录文件</td>
-<td align="center">管理文件</td>
-<td align="center">链接文件</td>
-<td align="center">块设备文件</td>
-<td align="center">字符设备文件</td>
-<td align="center">套接字文件</td>
-</tr>
-</tbody></table>
-<p><strong>”标号2“：</strong>所有者/所有者权限</p>
-<p><strong>”标号3“：</strong>组用户权限（一个组中除所有者拥有的权限）</p>
-<p><strong>”标号4“：</strong>其他用户权限（除当前所有者的组，其他组的权限）</p>
-<p><strong>文件权限</strong></p>
-<table>
-<thead>
-<tr>
-<th align="center">r</th>
-<th align="center">w</th>
-<th align="center">x</th>
-<th align="center">-</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">读权限</td>
-<td align="center">写权限</td>
-<td align="center">可执行权限</td>
-<td align="center">无权限</td>
-</tr>
-</tbody></table>
-<p><strong>”标号5“：</strong>如果是普通文件则为连接数,如果是目录文件则为第一级子目录数</p>
-<p><strong>”标号6“：</strong>用户名</p>
-<p><strong>”标号7“：</strong>组名</p>
-<p><strong>”标号8“：</strong>表示文件大小，单位为字节</p>
-<p><strong>”标号9“：</strong>表示最后修改时间</p>
-<p><strong>”标号10“：</strong>文件名</p>
-<p><strong>”标号11“：</strong>文件后缀</p>
-<p>用法3：<code>ls -l [文件包含的字符]*</code></p>
-<p>test目录下文件如下 a，a123，a.txt，bcd，下面使用ls -l a* 这个命令。</p>
-<pre class="line-numbers language-sh"><code class="language-sh">[root@TheAnswer test]# ls -l
-总用量 16
-drwxr-xr-x 3 root root 4096 2月  11 20:36 a
-drwxr-xr-x 2 root root 4096 2月  11 18:05 a123
--rw-r--r-- 1 root root   14 2月  11 17:43 a.txt
-drwxr-xr-x 2 root root 4096 2月  11 18:05 bcd<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>ls -l a* 该命令是显示当前目录下以a开头的文件或目录的详细信息。*是文件名称的匹配符，表示可以匹配任意字符串。</p>
-<pre><code>[root@TheAnswer test]# ls -l a*
--rw-r--r-- 1 root root   14 2月  11 17:43 a.txt
+                <h4 id="生成SSH"><a href="#生成SSH" class="headerlink" title="生成SSH"></a>生成SSH</h4><p>第一个账号生成ssh key</p>
+<pre class="line-numbers language-sh"><code class="language-sh">ssh-keygen -t rsa -C "your1@email.com"<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>第二个账号生成ssh key</p>
+<pre class="line-numbers language-sh"><code class="language-sh">ssh-keygen -t rsa -C "your2@email.com"<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h4 id="部署SSH-KEY"><a href="#部署SSH-KEY" class="headerlink" title="部署SSH KEY"></a>部署SSH KEY</h4><p>在GitLab/GitHub上部署SSH KEY</p>
+<h4 id="创建配置文件"><a href="#创建配置文件" class="headerlink" title="创建配置文件"></a>创建配置文件</h4><p>新建config没有后缀名</p>
+<h5 id="配置说明"><a href="#配置说明" class="headerlink" title="配置说明"></a>配置说明</h5><pre class="line-numbers language-sh"><code class="language-sh">Host    　　主机别名
+HostName　　服务器真实地址
+IdentityFile　　私钥文件路径
+PreferredAuthentications　　认证方式
+User　　用户名<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h5 id="配置内容"><a href="#配置内容" class="headerlink" title="配置内容"></a>配置内容</h5><pre class="line-numbers language-sh"><code class="language-sh"># 别名可以随意写 服务器真实地址是ip就是ip 是域名就是域名
+# 配置Github账号
+Host user1.github.com
+HostName github.com
+IdentityFile C:\\Users\\TheAnswer\\.ssh\\id_rsa
+PreferredAuthentications publickey
+User user1
 
-a:
-总用量 4
-drwxr-xr-x 3 root root 4096 2月  11 20:39 b
-
-a123:
-总用量 0</code></pre><p>用法4：<code>ls -a 、ls -al</code><br>ls -a 会把隐藏文件显示出来，如果要想看到文件的信息的话就可以使用 ls -al。</p>
-<pre class="line-numbers language-sh"><code class="language-sh">[root@TheAnswer test]# ls -a
-.  ..  a  a123  .abc.txt  a.txt  bcd
-
-[root@TheAnswer test]# ls -al
-总用量 24
-drwxr-xr-x  5 root root 4096 2月  11 18:31 .
-dr-xr-x---. 8 root root 4096 2月  11 17:12 ..
-drwxr-xr-x  3 root root 4096 2月  11 20:36 a
-drwxr-xr-x  2 root root 4096 2月  11 18:05 a123
--rw-r--r--  1 root root    0 2月  11 18:31 .abc.txt
--rw-r--r--  1 root root   14 2月  11 17:43 a.txt
-drwxr-xr-x  2 root root 4096 2月  11 18:05 bcd<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h4 id="pwd命令"><a href="#pwd命令" class="headerlink" title="pwd命令"></a>pwd命令</h4><p>pwd命令：显示用户当前工作目录，</p>
-<p>功能：显示当前目录在文件系统层次中的位置。</p>
-<p>用法：<code>pwd</code></p>
-<p>先进入到一个工作目录下</p>
-<pre class="line-numbers language-sh"><code class="language-sh">[root@TheAnswer ~]# cd test/a
-[root@TheAnswer a]#<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<p>然后输入pwd</p>
-<pre class="line-numbers language-sh"><code class="language-sh">[root@TheAnswer ~]# cd test/a
-[root@TheAnswer a]#<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<pre class="line-numbers language-sh"><code class="language-sh">[root@TheAnswer a]# pwd
-/root/test/a<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<h4 id="目录管理命令-mkdir-rmdir"><a href="#目录管理命令-mkdir-rmdir" class="headerlink" title="目录管理命令-mkdir/rmdir"></a>目录管理命令-mkdir/rmdir</h4><p>语法：<br>mkdir[参数] 目录名称<br>rmdir[参数] 目录名称</p>
-<p>功能：创建目录和删除目录。mkdir命令表示在当前目录中建立一个新目录，rmdir表示删除指定的目录。<br>-p表示递归删除或者创建目录。</p>
-<p>用法：<code>mkdir/rmdir -p 目录</code></p>
-<p>当前目录创建目录/删除目录</p>
-<pre class="line-numbers language-sh"><code class="language-sh">[root@TheAnswer ~]# cd test/a
-[root@TheAnswer a]#
-[root@TheAnswer test]# ls
-a  a123  a.txt  bcd
-[root@TheAnswer test]# mkdir test1
-[root@TheAnswer test]# ls
-a  a123  a.txt  bcd  test1
-[root@TheAnswer test]# rmdir test1
-[root@TheAnswer test]# ls
-a  a123  a.txt  bcd<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>递归创建/删除目录</p>
-<pre class="line-numbers language-sh"><code class="language-sh">[root@TheAnswer test]# mkdir -p test1/test2/test3
-[root@TheAnswer test]# cd test1/test2/test3
-[root@TheAnswer test3]# pwd
-/root/test/test1/test2/test3
-[root@TheAnswer test]# rmdir -p test1/test2/test3
-[root@TheAnswer test]# ls
-a  a123  a.txt  bcd<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h4 id="删除文件工具-rm"><a href="#删除文件工具-rm" class="headerlink" title="删除文件工具-rm"></a>删除文件工具-rm</h4><p>语法：<br>rm[参数] file1 file2 ……<br>rm[参数] dir1 dir2 dir ……</p>
-<p>功能：rm用来删除一个或多个文件的工具。并且可以用于删除非空目录。<br>也可以使用参数<code>-rf</code>强制删除一个非空目录。</p>
-<p>参数：<br><code>-f</code> 表示不显示警告或提示直接删除。<br><code>-i</code> 表示删除文件时显示警告信息并提示是否删除。<br><code>-r</code>或<code>-R</code>表示可以递归删除整个目录包括子目录及目录下的所有文件。</p>
-<p>用法：<code>rm -i file</code></p>
-<p>删除文件</p>
-<p>先用<code>touch b.txt </code>创建一个文件</p>
-<pre class="line-numbers language-sh"><code class="language-sh">[root@TheAnswer test]# touch b.txt
-[root@TheAnswer test]# ls
-a  a123  a.txt  bcd  b.txt
-[root@TheAnswer test]# rm -i b.txt
-rm：是否删除普通空文件 "b.txt"？y
-[root@TheAnswer test]# ls
-a  a123  a.txt  bcd<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>用法：<code>rm -ir dir</code></p>
-<p>删除目录及所有下级目录和文件</p>
-<p>先用<code>touch b.txt </code>创建一个文件</p>
-<pre class="line-numbers language-sh"><code class="language-sh">[root@TheAnswer test]# ls
-a  a123  a.txt  bcd
-[root@TheAnswer test]# rmdir a
-rmdir: 删除 "a" 失败: 目录非空
-[root@TheAnswer test]# rm -ir a
-rm：是否进入目录"a"? y
-rm：是否进入目录"a/b"? y
-rm：是否进入目录"a/b/c"? y
-rm：是否进入目录"a/b/c/d"? y
-rm：是否进入目录"a/b/c/d/e"? y
-rm：是否删除普通空文件 "a/b/c/d/e/e.txt"？y
-rm：是否删除目录 "a/b/c/d/e"？y
-rm：是否删除目录 "a/b/c/d"？y
-rm：是否删除目录 "a/b/c"？y
-rm：是否删除目录 "a/b"？y
-rm：是否删除目录 "a"？y<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>用法：<code>rm -rf dir</code></p>
-<p>不需要提示删除目录及所有下级目录和文件</p>
-<h4 id="文件名修改命令-mv"><a href="#文件名修改命令-mv" class="headerlink" title="文件名修改命令-mv"></a>文件名修改命令-mv</h4><p>语法：<br>mv 原文件名或目录名新文件名或目录名</p>
-<p>功能：文件更名或搬移。</p>
-<p>用法：<code>mv filename1 filename2</code></p>
-<p>将名称为filename1的文件改名为filename2并删除原文件。</p>
-<pre class="line-numbers language-sh"><code class="language-sh">[root@TheAnswer test]# ls
-a123  a.txt  bcd
-[root@TheAnswer test]# mv a.txt abcd.txt
-[root@TheAnswer test]# ls
-a123  abcd.txt  bcd
-[root@TheAnswer test]#<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>用法：<code>mv filename1 path/filename2</code></p>
-<p>将名称为filename1的文件移动到path路径下并改名为filename2并删除原文件。</p>
-<pre class="line-numbers language-sh"><code class="language-sh">[root@izbp14yziiuvu2qh2n015xz test]# ls
-a123  a.txt  bcd
-[root@izbp14yziiuvu2qh2n015xz test]# mv a.txt abcd.txt
-[root@izbp14yziiuvu2qh2n015xz test]# ls
-a123  abcd.txt  bcd
-[root@izbp14yziiuvu2qh2n015xz test]# ls
-a123  abcd.txt  bcd
-[root@izbp14yziiuvu2qh2n015xz test]# mv abcd.txt bcd/bcd.txt
-[root@izbp14yziiuvu2qh2n015xz test]# ls
-a123  bcd
-[root@izbp14yziiuvu2qh2n015xz test]# cd bcd
-[root@izbp14yziiuvu2qh2n015xz bcd]# ls
-bcd.txt<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="shell"><a href="#shell" class="headerlink" title="shell"></a>shell</h2><h3 id="比较运算符"><a href="#比较运算符" class="headerlink" title="比较运算符"></a>比较运算符</h3><table>
-<thead>
-<tr>
-<th align="center">-eq</th>
-<th align="center">-ne</th>
-<th align="center">-gt</th>
-<th align="center">-lt</th>
-<th align="center">ge</th>
-<th align="center">le</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">等于</td>
-<td align="center">不等于</td>
-<td align="center">大于</td>
-<td align="center">小于</td>
-<td align="center">大于等于</td>
-<td align="center">小于等于</td>
-</tr>
-</tbody></table>
-<h3 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h3><h4 id="函数语法"><a href="#函数语法" class="headerlink" title="函数语法"></a>函数语法</h4><p><code>[function] name(){函数体}[重定向]</code><br>其中function关键字和重定向是可选的</p>
-<h4 id="函数使用"><a href="#函数使用" class="headerlink" title="函数使用"></a>函数使用</h4><p><code>name 参数列表</code></p>
-<h4 id="写一个max函数返回3个参数中的最大值"><a href="#写一个max函数返回3个参数中的最大值" class="headerlink" title="写一个max函数返回3个参数中的最大值"></a>写一个max函数返回3个参数中的最大值</h4><pre class="line-numbers language-sh"><code class="language-sh">#!/bin/bash
-
-function max( )
-{
-echo $# $1 $2 $3
-if [ $# -ne 3 ];then
-echo "usage:max p1 p2 p3"
-exit 1
-fi
-max=$1
-if [ max -lt $2 ];then
-max=$2
-fi
-if [ max -lt $3 ];then
-max=$3
-fi
-return max
-}
-max 1 2 3
-echo "the max number of 1 2 3 is : $?"
-exit
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>执行上面程序报错</p>
-<pre class="line-numbers language-sh"><code class="language-sh">./max.sh: 第 11 行:[: max: 期待整数表达式
-./max.sh: 第 14 行:[: max: 期待整数表达式
-./max.sh: 第 17 行:return: max: 需要数字参数
-the max number of 1 2 3 is : 255<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-<p>可能是max 有歧义 用 ${max} 或者 $max 代替max成功了</p>
-<pre class="line-numbers language-sh"><code class="language-sh">#!/bin/bash
-
-function max( )
-{
-echo $# $1 $2 $3
-if [ $# -ne 3 ];then
-echo "usage:max p1 p2 p3"
-exit 1
-fi
-max=$1
-if [ ${max} -lt $2 ];then
-max=$2
-fi
-if [ ${max} -lt $3 ];then
-max=$3
-fi
-return ${max}
-}
-max 1 2 3
-echo "the max number of 1 2 3 is : $?"
-exit<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>结果</p>
-<pre class="line-numbers language-sh"><code class="language-sh">the max number of 1 2 3 is : 3<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<h3 id><a href="#" class="headerlink" title="$?"></a>$?</h3><h4 id="获取上一个命令的退出状态"><a href="#获取上一个命令的退出状态" class="headerlink" title="获取上一个命令的退出状态"></a>获取上一个命令的退出状态</h4><pre class="line-numbers language-sh"><code class="language-sh">#!/bin/bash
-
-function max( )
-{
-if [ $# -ne 3 ];then
-echo "usage:max p1 p2 p3"
-exit 1
-fi
-max=$1
-if [ $max -lt $2 ];then
-max=$2
-fi
-if [ ${max} -lt $3 ];then
-max=$3
-fi
-return ${max}
-}
-max 1 2 28 4
-echo "the max number is : $?"
-exit<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>max.sh中max方法传进去4个参数，这个时候会退出脚本且状态为1</p>
-<pre class="line-numbers language-sh"><code class="language-sh">[root@izbp14yziiuvu2qh2n015xz test]# echo $?
-1<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<h4 id="获取函数的返回值"><a href="#获取函数的返回值" class="headerlink" title="获取函数的返回值"></a>获取函数的返回值</h4><pre class="line-numbers language-sh"><code class="language-sh">#!/bin/bash
-
-function max( )
-{
-if [ $# -ne 3 ];then
-echo "usage:max p1 p2 p3"
-exit 1
-fi
-max=$1
-if [ $max -lt $2 ];then
-max=$2
-fi
-if [ ${max} -lt $3 ];then
-max=$3
-fi
-return ${max}
-}
-max 1 2 28 
-echo "the max number is : $?"
-exit<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>结果</p>
-<pre class="line-numbers language-sh"><code class="language-sh">the max number is : 28<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>把最大值得参数改为255</p>
-<p>结果</p>
-<pre class="line-numbers language-sh"><code class="language-sh">the max number is : 255<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>把最大值得参数改为256</p>
-<pre class="line-numbers language-sh"><code class="language-sh">the max number is : 0<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>这个是后$？获取值是0</p>
-<p>$?获取的返回值是0~255之前，超过255开始从0计算 也就是说 256 输出 0，257输出1，258输出2</p>
-<p>怎么获取返回值？</p>
-<p>用全局变量来获取</p>
-<p><code>$max</code></p>
-<p>注：在 Shell 函数中定义的变量默认也是全局变量，它和在函数外部定义变量拥有一样的效果</p>
-<p><strong>百度一下</strong><br><a href="https://www.baidu.com" target="_blank" rel="noopener">https://www.baidu.com</a></p>
+# 配置GitLab
+Host xxxx
+HostName xx.xx.xx.xx
+IdentityFile C:\\Users\\TheAnswer\\.ssh\\id_rsa2
+PreferredAuthentications publickey
+User user2<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
             </div>
             <hr />
@@ -986,9 +694,9 @@ exit<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《Linux 与 Shell》
+                    《配置多个git》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2020/02/18/article-linux/" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2021/08/11/pei-zhi-duo-ge-git/" property="cc:attributionName"
                rel="cc:attributionURL">
                 TheAnswer
             </a> 采用
@@ -1029,7 +737,7 @@ exit<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span
         repo: 'angeloTheAnswer.github.io',
         owner: 'angeloTheAnswer',
         admin: "TheAnswer",
-        id: '2020/02/18/article-linux/',
+        id: '2021/08/11/pei-zhi-duo-ge-git/',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -1312,46 +1020,48 @@ exit<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2020/02/18/article-title/">
+                <a href="/2021/08/11/pei-zhi-duo-ge-git/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="Linux 与 Shell">
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="配置多个git">
                         
-                        <span class="card-title">Linux 与 Shell</span>
+                        <span class="card-title">配置多个git</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Linux & Shell
+                            git配置
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2020-02-18
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2021-08-11
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Linux/" class="post-category" target="_blank">
-                                    Linux
+                            <a href="/categories/git/" class="post-category" target="_blank">
+                                    git
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Linux/" target="_blank">
-                        <span class="chip bg-color">Linux</span>
+                    <a href="/tags/git/" target="_blank">
+                        <span class="chip bg-color">git</span>
                     </a>
                     
                 </div>
@@ -1365,31 +1075,31 @@ exit<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/02/16/wenzhangmoban/">
+                <a href="/2021/06/13/pytest/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="网络安全">
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="pytest接口自动化框架搭建">
                         
-                        <span class="card-title">网络安全</span>
+                        <span class="card-title">pytest接口自动化框架搭建</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            网络安全
+                            pytest & 接口自动化
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-02-16
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2021-06-13
                             </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/网络安全/" class="post-category" target="_blank">
-                                    网络安全
+                            <a href="/categories/pytest/" class="post-category" target="_blank">
+                                    pytest
                                 </a>
                             
                             
@@ -1399,8 +1109,16 @@ exit<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/网络安全/" target="_blank">
-                        <span class="chip bg-color">网络安全</span>
+                    <a href="/tags/python/" target="_blank">
+                        <span class="chip bg-color">python</span>
+                    </a>
+                    
+                    <a href="/tags/自动化/" target="_blank">
+                        <span class="chip bg-color">自动化</span>
+                    </a>
+                    
+                    <a href="/tags/pytest/" target="_blank">
+                        <span class="chip bg-color">pytest</span>
                     </a>
                     
                 </div>

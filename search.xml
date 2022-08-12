@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>配置多个git</title>
+      <link href="/2021/08/11/pei-zhi-duo-ge-git/"/>
+      <url>/2021/08/11/pei-zhi-duo-ge-git/</url>
+      
+        <content type="html"><![CDATA[<h4 id="生成SSH"><a href="#生成SSH" class="headerlink" title="生成SSH"></a>生成SSH</h4><p>第一个账号生成ssh key</p><pre class="line-numbers language-sh"><code class="language-sh">ssh-keygen -t rsa -C "your1@email.com"<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>第二个账号生成ssh key</p><pre class="line-numbers language-sh"><code class="language-sh">ssh-keygen -t rsa -C "your2@email.com"<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h4 id="部署SSH-KEY"><a href="#部署SSH-KEY" class="headerlink" title="部署SSH KEY"></a>部署SSH KEY</h4><p>在GitLab/GitHub上部署SSH KEY</p><h4 id="创建配置文件"><a href="#创建配置文件" class="headerlink" title="创建配置文件"></a>创建配置文件</h4><p>新建config没有后缀名</p><h5 id="配置说明"><a href="#配置说明" class="headerlink" title="配置说明"></a>配置说明</h5><pre class="line-numbers language-sh"><code class="language-sh">Host    　　主机别名HostName　　服务器真实地址IdentityFile　　私钥文件路径PreferredAuthentications　　认证方式User　　用户名<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><h5 id="配置内容"><a href="#配置内容" class="headerlink" title="配置内容"></a>配置内容</h5><pre class="line-numbers language-sh"><code class="language-sh"># 别名可以随意写 服务器真实地址是ip就是ip 是域名就是域名# 配置Github账号Host user1.github.comHostName github.comIdentityFile C:\\Users\\TheAnswer\\.ssh\\id_rsaPreferredAuthentications publickeyUser user1# 配置GitLabHost xxxxHostName xx.xx.xx.xxIdentityFile C:\\Users\\TheAnswer\\.ssh\\id_rsa2PreferredAuthentications publickeyUser user2<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> git </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> git </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>pytest接口自动化框架搭建</title>
       <link href="/2021/06/13/pytest/"/>
       <url>/2021/06/13/pytest/</url>
