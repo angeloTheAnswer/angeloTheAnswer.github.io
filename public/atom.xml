@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2022-06-25T03:04:07.652Z</updated>
+  <updated>2022-08-12T03:14:01.576Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,11 +17,38 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>配置多个git</title>
+    <link href="http://yoursite.com/2021/08/11/pei-zhi-duo-ge-git/"/>
+    <id>http://yoursite.com/2021/08/11/pei-zhi-duo-ge-git/</id>
+    <published>2021-08-11T09:35:38.000Z</published>
+    <updated>2022-08-12T03:14:01.576Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h4 id=&quot;生成SSH&quot;&gt;&lt;a href=&quot;#生成SSH&quot; class=&quot;headerlink&quot; title=&quot;生成SSH&quot;&gt;&lt;/a&gt;生成SSH&lt;/h4&gt;&lt;p&gt;第一个账号生成ssh key&lt;/p&gt;
+&lt;pre class=&quot;line-numbers
+        
+      
+    
+    </summary>
+    
+      <category term="git" scheme="http://yoursite.com/categories/git/"/>
+    
+    
+      <category term="git" scheme="http://yoursite.com/tags/git/"/>
+    
+  </entry>
+  
+  <entry>
     <title>pytest接口自动化框架搭建</title>
     <link href="http://yoursite.com/2021/06/13/pytest/"/>
     <id>http://yoursite.com/2021/06/13/pytest/</id>
     <published>2021-06-13T13:13:30.000Z</published>
-    <updated>2022-06-25T03:04:07.652Z</updated>
+    <updated>2022-07-22T05:49:03.232Z</updated>
     
     <summary type="html">
     
@@ -52,9 +79,17 @@
     <link href="http://yoursite.com/2020/12/02/work/"/>
     <id>http://yoursite.com/2020/12/02/work/</id>
     <published>2020-12-02T03:13:33.000Z</published>
-    <updated>2022-06-18T07:53:29.468Z</updated>
+    <updated>2022-08-09T04:20:06.124Z</updated>
     
     <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h4 id=&quot;测试&quot;&gt;&lt;a href=&quot;#测试&quot; class=&quot;headerlink&quot;
+        
+      
     
     </summary>
     
@@ -64,11 +99,41 @@
   </entry>
   
   <entry>
+    <title>removeDuplicates</title>
+    <link href="http://yoursite.com/2020/12/01/removeduplicates/"/>
+    <id>http://yoursite.com/2020/12/01/removeduplicates/</id>
+    <published>2020-12-01T04:19:02.000Z</published>
+    <updated>2022-08-22T08:07:32.588Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;strong&gt;题目:&lt;/strong&gt;&lt;br&gt;&lt;strong&gt;给你一个 升序排列 的数组 nums ，请你 原地 删除重复出现的元素，使每个元素 只出现一次 ，返回删除后数组的新长度。元素的 相对顺序 应该保持 一致
+        
+      
+    
+    </summary>
+    
+      <category term="Solution" scheme="http://yoursite.com/categories/Solution/"/>
+    
+    
+      <category term="python" scheme="http://yoursite.com/tags/python/"/>
+    
+      <category term="Solution" scheme="http://yoursite.com/tags/Solution/"/>
+    
+      <category term="Array" scheme="http://yoursite.com/tags/Array/"/>
+    
+  </entry>
+  
+  <entry>
     <title>SQL固定分组统计</title>
     <link href="http://yoursite.com/2020/02/20/mysql/"/>
     <id>http://yoursite.com/2020/02/20/mysql/</id>
     <published>2020-02-20T06:13:44.000Z</published>
-    <updated>2020-09-23T07:49:30.353Z</updated>
+    <updated>2022-07-22T05:26:56.561Z</updated>
     
     <summary type="html">
     
@@ -95,7 +160,7 @@
     <link href="http://yoursite.com/2020/02/18/article-title/"/>
     <id>http://yoursite.com/2020/02/18/article-title/</id>
     <published>2020-02-18T06:24:27.000Z</published>
-    <updated>2021-07-20T14:38:00.290Z</updated>
+    <updated>2022-07-22T05:26:56.571Z</updated>
     
     <summary type="html">
     
@@ -122,7 +187,7 @@
     <link href="http://yoursite.com/2020/02/18/article-linux/"/>
     <id>http://yoursite.com/2020/02/18/article-linux/</id>
     <published>2020-02-18T06:24:27.000Z</published>
-    <updated>2020-10-09T03:33:44.214Z</updated>
+    <updated>2022-07-22T05:26:56.563Z</updated>
     
     <summary type="html">
     
@@ -149,7 +214,7 @@
     <link href="http://yoursite.com/2020/02/16/wenzhangmoban/"/>
     <id>http://yoursite.com/2020/02/16/wenzhangmoban/</id>
     <published>2020-02-16T07:09:23.000Z</published>
-    <updated>2020-09-15T11:41:59.876Z</updated>
+    <updated>2022-07-22T05:26:56.578Z</updated>
     
     <summary type="html">
     

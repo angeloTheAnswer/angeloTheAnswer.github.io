@@ -269,7 +269,6 @@ if __name__=='__main__':
 
 ```sh
 [运行信息]
-PS D:\work\repository\project\api_automation> & D:/python/python.exe d:/work/repository/project/api_automation/run.py
 ======================================================= test session starts =======================================================
 platform win32 -- Python 3.7.9, pytest-6.2.4, py-1.10.0, pluggy-0.13.1 -- D:\python\python.exe
 cachedir: .pytest_cache
@@ -283,7 +282,6 @@ testcase/test_demo.py::TestDemoClass::test_01_case1
 PASSED
 
 ======================================================== 1 passed in 0.11s ======================================================== 
-PS D:\work\repository\project\api_automation> 
 ```
 
 #### 测试用例执行顺序
@@ -300,11 +298,11 @@ class TestDemoClass:
 	def test_02_case2(self):
 		print('\n测试用例2')
 ```
-##### pytest 分组执行
+#### pytest 分组执行
 pytest进行分组测试的方法是使用装饰器 @pytest.mark.标记名称，被标记为相同名称的用例可以看做为同一个组。  
 分组执行可应用与冒烟用例执行、分模块执行、分接口和web执行。
 
-###### 分组执行-冒烟用例
+##### 分组执行-冒烟用例
 ```sh
 [testcase/test_demo.py]
 class TestDemoClass:
@@ -337,7 +335,6 @@ markers=
 
 ```sh
 [运行信息]
-PS D:\work\repository\project\api_automation> & D:/python/python.exe d:/work/repository/project/api_automation/run.py
 ========================================================================================= test session starts =========================================================================================
 platform win32 -- Python 3.7.9, pytest-6.2.4, py-1.10.0, pluggy-0.13.1 -- D:\python\python.exe
 cachedir: .pytest_cache
@@ -351,10 +348,9 @@ testcase/test_demo.py::TestDemoClass::test_01_case1
 PASSED
 
 ================================================================================== 1 passed, 53 deselected in 2.61s =================================================================================== 
-PS D:\work\repository\project\api_automation>
 ```
 
-###### 同一个用例标记多个组
+##### 同一个用例标记多个组
 ```sh
 [testcase/test_demo.py]
 class TestDemoClass:
@@ -385,8 +381,138 @@ markers=
 	smoke2:冒烟用例2
 ``` 
 
-###### 分组执行支持逻辑运算符
-or连接多个标记名称会执行包含这些标记的用例
+##### 分组执行支持逻辑运算符
+1、or连接多个标记名称会执行包含这些标记的用例  
+2、and 连接多个标记名称会执行多个标记均存在的用例  
+3、not 连接多个标记名称会执行非这个标记的用例  
+
+以or连接举例：  
+```sh
+[testcase/test_demo.py]
+class TestDemoClass:
+	@pytest.mark.smoke1
+	def test_01_case1(self):
+		print('\n测试用例1')
+	@pytest.mark.smoke2
+	def test_02_case2(self):
+		print('\n测试用例2')
+```
+
+```sh
+[pytest.ini]
+#命令行的参数，用空格分隔
+addopts=-vs -m "smoke1 or smoke2"
+#测试用例路径
+testpaths=testcase
+#模块名的规则
+python_files=test_*.py
+#类名的规则
+python_classes=Test*
+#方法名的规则
+python_functions=test
+#标记测试用例
+markers=
+	smoke1:冒烟用例1
+	smoke2:冒烟用例2
+``` 
 
 
+```sh
+[运行信息]
+========================================================================================= test session starts =========================================================================================
+platform win32 -- Python 3.7.9, pytest-6.2.4, py-1.10.0, pluggy-0.13.1 -- D:\python\python.exe
+cachedir: .pytest_cache
+metadata: {'Python': '3.7.9', 'Platform': 'Windows-10-10.0.19041-SP0', 'Packages': {'pytest': '6.2.4', 'py': '1.10.0', 'pluggy': '0.13.1'}, 'Plugins': {'allure-pytest': '2.9.45', 'forked': '1.4.0', 'html': '3.1.1', 'metadata': '2.0.1', 'ordering': '0.6', 'rerunfailures': '10.2', 'xdist': '2.5.0'}, 'JAVA_HOME': 'D:\\java\\jdk1.8'}
+rootdir: D:\work\repository\project\api_automation, configfile: pytest.ini, testpaths: testcase
+plugins: allure-pytest-2.9.45, forked-1.4.0, html-3.1.1, metadata-2.0.1, ordering-0.6, rerunfailures-10.2, xdist-2.5.0
+collected 54 items / 52 deselected / 2 selected
 
+testcase/test_demo.py::TestDemoClass::test_01_case1
+测试用例1
+PASSED
+testcase/test_demo.py::TestDemoClass::test_02_case2
+测试用例2
+PASSED
+
+================================================================================== 2 passed, 52 deselected in 2.54s ===================================================================================
+```
+
+#### 测试用例跳过
+
+##### 有条件跳过
+```sh
+@pytest.mark.skipif(条件参数>=条件,reason="原因")
+```
+
+##### 无条件跳过
+```sh
+@pytest.mark.skip(reason="原因")
+```
+
+#### Pytest 前后置处理(固件、夹具)
+
+
+##### setup/teardown，setup_class/teardown_class
+```sh
+class TestDemo:
+	#这个在所用用例之前执行一次
+	def setup_class(self):
+		print('\n在每个类执行之前的初始化操作：例如：创建日志对象、创建数据库连接、创建接口的请求对象')
+	#在每个用例之前执行一次
+	def setup(self):
+		print('\n在执行测试用之前初始化的代码：打开浏览器、加载网页')
+	def test_01(self):
+		print('\n测试用例1')
+	def test_02(self):
+		print('\n测试用例2')
+	def teardown(self):
+		print('\n在执行测试用例之后的扫尾的代码：关闭浏览器')
+	def teardown_class(self):
+		print('\n在每个类执行后的扫尾工作：比如：销毁日志对象、销毁数据库连接、销毁接口的请求对象')
+```
+
+##### 使用pytest.fixture()装饰器来实现部分用例的前后置
+```sh
+@pytest.fixture(scope="",param="",autouse="",ids="",name="")
+```
+
+
+(1)scope表示的是被@pytest.fixture标记的方法的作用域，默认为function，还有class、module、package/session  
+(2)param：参数化（支持列表[]、元祖()、字典列表[{},{},{}]、字典元祖([],[],[])）  
+print('\n在每个类执行后的扫尾工作：比如：销毁日志对象、销毁数据库连接、销毁接口的请求对象')  
+(3)autouse=True：自动使用默False  
+(4)ids：当使用param参数化时，给每个值设置一个变量名，意义不大  
+(5)name：表示的是给被@pytest.fixture标记的方法取一个别名，当取了别名之后原来的名称就用不了  
+***return和yield都是返回的意思但是return后面不能有代码，yield后面可以有代码*** 
+
+```sh
+import pytest
+@pytest.fixture(scope="function",param=['1','2','3'],ids=['a','b','c'])
+def my_fixture(request):
+	print('前置')
+	yield request.param
+	print('后置')
+class TestDemoClass:
+	def test_01_case1(self):
+		print('\n测试用例1')
+	def test_02_case2(self,my_fixture):
+		print('\n测试用例2')
+		print('------'+str(my_fixture))
+```
+
+```sh
+import pytest
+@pytest.fixture(scope="function",param=['1','2','3'],name='aaa')
+def my_fixture(request):
+	return request.param
+class TestDemoClass:
+	def test_01_case1(self):
+		print('\n测试用例1')
+	def test_02_case2(self,aaa):
+		print('\n测试用例2')
+		print('------'+str(aaa))
+
+```
+
+#### 断言
+assert
