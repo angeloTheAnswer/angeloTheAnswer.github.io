@@ -99,6 +99,36 @@
   </entry>
   
   <entry>
+    <title>removeDuplicates</title>
+    <link href="http://yoursite.com/2020/12/01/removeduplicates/"/>
+    <id>http://yoursite.com/2020/12/01/removeduplicates/</id>
+    <published>2020-12-01T04:19:02.000Z</published>
+    <updated>2022-08-22T08:07:32.588Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;strong&gt;题目:&lt;/strong&gt;&lt;br&gt;&lt;strong&gt;给你一个 升序排列 的数组 nums ，请你 原地 删除重复出现的元素，使每个元素 只出现一次 ，返回删除后数组的新长度。元素的 相对顺序 应该保持 一致
+        
+      
+    
+    </summary>
+    
+      <category term="Solution" scheme="http://yoursite.com/categories/Solution/"/>
+    
+    
+      <category term="python" scheme="http://yoursite.com/tags/python/"/>
+    
+      <category term="Solution" scheme="http://yoursite.com/tags/Solution/"/>
+    
+      <category term="Array" scheme="http://yoursite.com/tags/Array/"/>
+    
+  </entry>
+  
+  <entry>
     <title>SQL固定分组统计</title>
     <link href="http://yoursite.com/2020/02/20/mysql/"/>
     <id>http://yoursite.com/2020/02/20/mysql/</id>
