@@ -4,12 +4,11 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="Linux 与 Shell, TheAnswer">
+    <meta name="keywords" content="maxProfit, TheAnswer">
     <meta name="baidu-site-verification" content="fmlEuI34ir">
     <meta name="google-site-verification" content="yCy2azpds5XSuGZvis6OuA-XIGF5GuGpYRAaGfD6o48">
     <meta name="360-site-verification" content="b7c11a830ef90fd1464ad6206bb7b6e7">
-    <meta name="description" content="前言网络安全
-操作系统简史操作系统可分为四个时代第一个时代是OS时代，这个时候操作系统才刚刚成型，最早是1973年由贝尔实验室开发的UNIX系统，以及1982年与1991年在UNIX系统基础上进行扩展定制的若干变种第二个时代是PC时代，PC">
+    <meta name="description" content="题目:给你一个整数数组 prices ，其中 prices[i] 表示某支股票第 i 天的价格。在每一天，你可以决定是否购买和/或出售股票。你在任何时候 最多 只能持有 一股 股票。你也可以先购买，然后在 同一天 出售。返回 你能获得的 最">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +16,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Linux 与 Shell | TheAnswer的博客</title>
+    <title>maxProfit | TheAnswer的博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -330,13 +329,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/27.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/19.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        Linux 与 Shell
+                        maxProfit
                     </div>
                 </div>
             </div>
@@ -447,8 +446,16 @@
                     
                     <div class="article-tag">
                         
-                        <a href="/tags/Linux/" target="_blank">
-                            <span class="chip bg-color">Linux</span>
+                        <a href="/tags/python/" target="_blank">
+                            <span class="chip bg-color">python</span>
+                        </a>
+                        
+                        <a href="/tags/Solution/" target="_blank">
+                            <span class="chip bg-color">Solution</span>
+                        </a>
+                        
+                        <a href="/tags/Array/" target="_blank">
+                            <span class="chip bg-color">Array</span>
                         </a>
                         
                     </div>
@@ -459,8 +466,8 @@
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                        <a href="/categories/Linux/" class="post-category" target="_blank">
-                            Linux
+                        <a href="/categories/Solution/" class="post-category" target="_blank">
+                            Solution
                         </a>
                         
                     </div>
@@ -471,7 +478,7 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-02-18
+                    2021-09-07
                 </div>
 
                 <div class="post-author info-break-policy">
@@ -485,7 +492,7 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    287
+                    304
                 </div>
                 
 
@@ -508,10 +515,20 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>网络安全</p>
-<h2 id="操作系统简史"><a href="#操作系统简史" class="headerlink" title="操作系统简史"></a>操作系统简史</h2><p>操作系统可分为四个时代<br>第一个时代是OS时代，这个时候操作系统才刚刚成型，最早是1973年由贝尔实验室开发的UNIX系统，以及1982年与1991年在UNIX系统基础上进行扩展定制的若干变种<br>第二个时代是PC时代，PC时代崛起于1975年，当年乔布斯开发了Apple系统，随后1980年，比尔盖茨开发了DOS系统，从这时起更多的人开始接触操作系统，个人计算机得以普及。<br>第三个时代是GUI时代，GUI时代的代表作是1979年乔布斯开发的Mac系统与1990年比尔盖茨开发的Windows系统，以及1994年的Linux系统，这三个系统影响了整个时代，一直到现在仍被广泛使用。<br>第四个时代是移动OS时代，随着移动互联网的发展，移动OS也变得越来越重要，在移动OS时代，最知名的是Google的Android系统，以及乔布斯的iOS系统。</p>
-<h2 id="Shell是什么"><a href="#Shell是什么" class="headerlink" title="Shell是什么"></a>Shell是什么</h2><p><img src="shuoming.jpeg" alt="shuoming"></p>
-<h2 id="Bash是什么"><a href="#Bash是什么" class="headerlink" title="Bash是什么"></a>Bash是什么</h2><p><strong>百度一下</strong><br><a href="https://www.baidu.com" target="_blank" rel="noopener">https://www.baidu.com</a></p>
+                <p><strong>题目:</strong><br><strong>给你一个整数数组 prices ，其中 prices[i] 表示某支股票第 i 天的价格。</strong><br><strong>在每一天，你可以决定是否购买和/或出售股票。你在任何时候 最多 只能持有 一股 股票。你也可以先购买，然后在 同一天 出售。</strong><br><strong>返回 你能获得的 最大 利润 。</strong></p>
+<p><em>思路：</em><br><em>交易者初始状态是持币未持股，所以一定是先买在卖，既然是先买在卖，那么要想收益，一定是后一日的股价大于前一日的股价</em><br><em>题意是求上升区间的高度和</em></p>
+<pre class="line-numbers language-sh"><code class="language-sh">class Solution:
+    def maxProfit(self, prices: List[int]) -> int:
+        if len(prices) < 2:
+            return 0
+        sum = 0 
+        for i in range(0,len(prices)-1):
+            if prices[i+1] - prices[i]>0:
+                temp = prices[i+1] - prices[i]
+                sum+=temp
+        return sum<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><strong>边界说明：</strong><br><code>len(prices) < 2</code><br><em>因为买、卖后才能获利，所以prices的长度小于2无法获利</em><br><code>range(0,len(prices)-1)</code><br><em>由于要比较后一天i+1与当前一天的价格i,因此i+1要小于prices的长度</em></p>
+<p><strong>TheAnswer</strong><br><em>运算符<code>+=</code>表示将运算符左边变量的内容与运算符右边变量的内容相加，并再次将结果存储到运算符左边的变量中</em></p>
 
             </div>
             <hr />
@@ -670,9 +687,9 @@
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《Linux 与 Shell》
+                    《maxProfit》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2020/02/18/article-title/" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2021/09/07/maxprofit/" property="cc:attributionName"
                rel="cc:attributionURL">
                 TheAnswer
             </a> 采用
@@ -713,7 +730,7 @@
         repo: 'angeloTheAnswer.github.io',
         owner: 'angeloTheAnswer',
         admin: "TheAnswer",
-        id: '2020/02/18/article-title/',
+        id: '2021/09/07/maxprofit/',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -996,46 +1013,56 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2020/02/20/mysql/">
+                <a href="/2021/09/07/maxprofit/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="SQL固定分组统计">
+                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="maxProfit">
                         
-                        <span class="card-title">SQL固定分组统计</span>
+                        <span class="card-title">maxProfit</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            SQL
+                            上升区间求和
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2020-02-20
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2021-09-07
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/SQL/" class="post-category" target="_blank">
-                                    SQL
+                            <a href="/categories/Solution/" class="post-category" target="_blank">
+                                    Solution
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/SQL/" target="_blank">
-                        <span class="chip bg-color">SQL</span>
+                    <a href="/tags/python/" target="_blank">
+                        <span class="chip bg-color">python</span>
+                    </a>
+                    
+                    <a href="/tags/Solution/" target="_blank">
+                        <span class="chip bg-color">Solution</span>
+                    </a>
+                    
+                    <a href="/tags/Array/" target="_blank">
+                        <span class="chip bg-color">Array</span>
                     </a>
                     
                 </div>
@@ -1049,31 +1076,31 @@
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/02/18/article-linux/">
+                <a href="/2021/08/11/pei-zhi-duo-ge-git/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/27.jpg" class="responsive-img" alt="Linux 与 Shell">
+                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="配置多个git">
                         
-                        <span class="card-title">Linux 与 Shell</span>
+                        <span class="card-title">配置多个git</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Linux & Shell
+                            git配置
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-02-18
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2021-08-11
                             </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Linux/" class="post-category" target="_blank">
-                                    Linux
+                            <a href="/categories/git/" class="post-category" target="_blank">
+                                    git
                                 </a>
                             
                             
@@ -1083,8 +1110,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Linux/" target="_blank">
-                        <span class="chip bg-color">Linux</span>
+                    <a href="/tags/git/" target="_blank">
+                        <span class="chip bg-color">git</span>
                     </a>
                     
                 </div>
