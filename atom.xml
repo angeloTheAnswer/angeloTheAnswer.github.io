@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2022-09-07T08:00:57.903Z</updated>
+  <updated>2022-09-20T01:38:02.646Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>pythonSection</title>
+    <link href="http://yoursite.com/2021/09/11/pythonsection/"/>
+    <id>http://yoursite.com/2021/09/11/pythonsection/</id>
+    <published>2021-09-11T08:55:33.000Z</published>
+    <updated>2022-09-20T01:38:02.646Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h4 id=&quot;切片操作&quot;&gt;&lt;a href=&quot;#切片操作&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="切片(slice)" scheme="http://yoursite.com/categories/%E5%88%87%E7%89%87-slice/"/>
+    
+    
+      <category term="python" scheme="http://yoursite.com/tags/python/"/>
+    
+      <category term="Solution" scheme="http://yoursite.com/tags/Solution/"/>
+    
+      <category term="Array" scheme="http://yoursite.com/tags/Array/"/>
+    
+  </entry>
   
   <entry>
     <title>maxProfit</title>

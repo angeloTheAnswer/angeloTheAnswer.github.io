@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2021/09/11/pythonsection/</loc>
+    
+    <lastmod>2022-09-20T01:38:02.646Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2020/12/01/removeduplicates/</loc>
     
     <lastmod>2022-09-09T01:36:52.097Z</lastmod>

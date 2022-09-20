@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>pythonSection</title>
+      <link href="/2021/09/11/pythonsection/"/>
+      <url>/2021/09/11/pythonsection/</url>
+      
+        <content type="html"><![CDATA[<h4 id="切片操作"><a href="#切片操作" class="headerlink" title="切片操作"></a>切片操作</h4><p>在Python中，<strong>切片</strong>是对序列型对象的一种高级索引方法。普通索引只能取出序列中<strong>一个下标</strong>对应的元素，而切片取出序列中一个范围对应的元素。</p><p><em>序列型对象：list列表、string字符串、tuple元组，</em></p><h4 id="切片的格式以List为例"><a href="#切片的格式以List为例" class="headerlink" title="切片的格式以List为例"></a>切片的格式以List为例</h4><h5 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h5><pre><code>切片是对列表进行截取操作。</code></pre><h5 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h5><p>简单切片<code>list[start:stop]</code><br>扩展切片<code>list[start:stop:step]</code></p><h5 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h5><p>start – 列表需要开始切片位置的下标(截取时不包括下标对应的元素)，若为缺省值，那么默认从列表下标为0处开始切片；</p><p>stop – 切片所需要切到的最终位置的下标（截取时包括该下标对应的元素），若为缺省值，那么默认截取至列表的最后一个元素（包括该元素）；</p><p>step – 表示切片截取时的步幅，若为缺省值，那么默认为1。</p><h5 id="基本索引"><a href="#基本索引" class="headerlink" title="基本索引"></a>基本索引</h5><table><thead><tr><th>nums中的元素</th><th align="center">0</th><th align="right">1</th><th align="right">2</th><th align="right">3</th><th align="right">4</th><th align="right">5</th><th align="right">6</th><th align="right">7</th><th align="right">8</th><th align="right">9</th></tr></thead><tbody><tr><td>正下标</td><td align="center">nums[0]</td><td align="right">nums[1]</td><td align="right">nums[2]</td><td align="right">nums[3]</td><td align="right">nums[4]</td><td align="right">nums[5]</td><td align="right">nums[6]</td><td align="right">nums[7]</td><td align="right">nums[8]</td><td align="right">nums[9]</td></tr><tr><td>负下标</td><td align="center">nums[-10]</td><td align="right">nums[-9]</td><td align="right">nums[-8]</td><td align="right">nums[-7]</td><td align="right">nums[-6]</td><td align="right">nums[-5]</td><td align="right">nums[-4]</td><td align="right">nums[-3]</td><td align="right">nums[-2]</td><td align="right">nums[-1]</td></tr></tbody></table><h5 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h5><pre class="line-numbers language-sh"><code class="language-sh">    nums=[0,1,2,3,4,5,6,7,8,9]    print('nums[5:9]-start、end都存在step缺省。从nums[5]开始step为1取到nums[9]结束，其结果不包括nums[9]这个元素。',nums[5:9])    print('nums[5:]-end缺省。从nums[5]开始step为1取到nums[9]结束，其结果包括nums[9]这个元素。',nums[5:])    print('nums[:9]-start缺省。从nums[0]开始step为1取到nums[9]结束，其结果不包括nums[9]这个元素。',nums[:9])    print('nums[::2]-end缺省、start缺省、step为2。从nums[0]开始每隔两个元素取数，取到nums[9]结束。',nums[::2])    print('nums[::-2]-end缺省、start缺省、step为-2。step为负值从右往左取，从nums[9]开始每隔两个元素取数，取到nums[0]。',nums[::-2])    print('nums[:-1]-start缺省、end为负值。从nums[0]开始step为1取到nums[-1]结束，其结果不包括nums[-1]。',nums[:-1])    print('nums[-10:]-end缺省、start为负值。从nums[-10]开始step为1取到nums[9]结束，其结果包括nums[9]。',nums[-10:])   <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h5 id="输出结果"><a href="#输出结果" class="headerlink" title="输出结果"></a>输出结果</h5><pre class="line-numbers language-sh"><code class="language-sh">nums[5:9]-start、end都存在step缺省。从nums[5]开始step为1取到nums[9]结束，其结果不包括nums[9]这个元素。 [5, 6, 7, 8]nums[5:]-end缺省。从nums[5]开始step为1取到nums[9]结束，其结果包括nums[9]这个元素。 [5, 6, 7, 8, 9]nums[:9]-start缺省。从nums[0]开始step为1取到nums[9]结束，其结果不包括nums[9]这个元素。 [0, 1, 2, 3, 4, 5, 6, 7, 8]nums[::2]-end缺省、start缺省、step为2。从nums[0]开始每隔两个元素取数，取到nums[9]结束。 [0, 2, 4, 6, 8]nums[::-2]-end缺省、start缺省、step为-2。step为负值从右往左取，从nums[9]开始每隔两个元素取数，取到nums[0]。 [9, 7, 5, 3, 1]nums[:-1]-start缺省、end为负值。从nums[0]开始step为1取到nums[-1]结束，其结果不包括nums[-1]。 [0, 1, 2, 3, 4, 5, 6, 7, 8]nums[-10:]-end缺省、start为负值。从nums[-10]开始step为1取到nums[9]结束，其结果包括nums[9]。 [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h4 id="常见的切片形式"><a href="#常见的切片形式" class="headerlink" title="常见的切片形式"></a>常见的切片形式</h4><h5 id="列表的复制"><a href="#列表的复制" class="headerlink" title="列表的复制"></a>列表的复制</h5><pre class="line-numbers language-sh"><code class="language-sh">list1 = [0,1,2,3,4,5,6,7,8,9]list2 = list1[:]print('list2:',list2)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><p>输出结果</p><pre class="line-numbers language-sh"><code class="language-sh">list2: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h5 id="列表的翻转"><a href="#列表的翻转" class="headerlink" title="列表的翻转"></a>列表的翻转</h5><pre class="line-numbers language-sh"><code class="language-sh">list = [0,1,2,3,4,5,6,7,8,9]print('list翻转:',list[::-1])<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p>输出结果</p><pre class="line-numbers language-sh"><code class="language-sh">list翻转: [9, 8, 7, 6, 5, 4, 3, 2, 1, 0]<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 切片(slice) </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> python </tag>
+            
+            <tag> Solution </tag>
+            
+            <tag> Array </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>maxProfit</title>
       <link href="/2021/09/07/maxprofit/"/>
       <url>/2021/09/07/maxprofit/</url>
