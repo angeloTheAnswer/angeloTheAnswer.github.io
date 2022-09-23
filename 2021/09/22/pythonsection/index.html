@@ -598,7 +598,7 @@ print('list翻转:',list[::-1])<span aria-hidden="true" class="line-numbers-rows
 向右轮转1步:[7,1,2,3,4,5,6]
 向右轮转2步:[6,7,1,2,3,4,5]
 向右轮转3步:[5,6,7,1,2,3,4]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p><img src="rotate.png" alt="目录结构"></p>
+<p><img src="rotate.png" alt="图解"></p>
 <p><em>思路：</em><br><em>向右轮转K个位置，如果K大于数组长度len(nums),那么实际轮转k%len(nums)个位置。如果实际轮转的k%len(nums)个位置，那么就相当于把后k%len(nums)个元素按原来的顺序轮转到前面，第nums[n-k]轮转到最后一个位置,这里可以理解成两段list改变位置，第一段nums[n-k:],第二段nums[:n-k],这里nums[:n-k]不会取到nums[n-k]而nums[n-k:]会取到n-k</em></p>
 <pre class="line-numbers language-sh"><code class="language-sh">class Solution:
     def rotate(self, nums: List[int], k: int) -> None:
