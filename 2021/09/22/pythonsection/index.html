@@ -4,15 +4,13 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="配置多个git, TheAnswer">
+    <meta name="keywords" content="pythonSection, TheAnswer">
     <meta name="baidu-site-verification" content="fmlEuI34ir">
     <meta name="google-site-verification" content="yCy2azpds5XSuGZvis6OuA-XIGF5GuGpYRAaGfD6o48">
     <meta name="360-site-verification" content="b7c11a830ef90fd1464ad6206bb7b6e7">
-    <meta name="description" content="生成SSH第一个账号生成ssh key
-ssh-keygen -t rsa -C &#34;your1@email.com&#34;
-第二个账号生成ssh key
-ssh-keygen -t rsa -C &#34;your2@email.com&#34;
-部署SSH K">
+    <meta name="description" content="切片操作在Python中，切片是对序列型对象的一种高级索引方法。普通索引只能取出序列中一个下标对应的元素，而切片取出序列中一个范围对应的元素。
+序列型对象：list列表、string字符串、tuple元组，
+切片的格式以List为例描述切片">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -20,7 +18,7 @@ ssh-keygen -t rsa -C &#34;your2@email.com&#34;
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>配置多个git | TheAnswer的博客</title>
+    <title>pythonSection | TheAnswer的博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -333,13 +331,13 @@ ssh-keygen -t rsa -C &#34;your2@email.com&#34;
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/9.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        配置多个git
+                        pythonSection
                     </div>
                 </div>
             </div>
@@ -450,8 +448,16 @@ ssh-keygen -t rsa -C &#34;your2@email.com&#34;
                     
                     <div class="article-tag">
                         
-                        <a href="/tags/git/" target="_blank">
-                            <span class="chip bg-color">git</span>
+                        <a href="/tags/python/" target="_blank">
+                            <span class="chip bg-color">python</span>
+                        </a>
+                        
+                        <a href="/tags/Solution/" target="_blank">
+                            <span class="chip bg-color">Solution</span>
+                        </a>
+                        
+                        <a href="/tags/Array/" target="_blank">
+                            <span class="chip bg-color">Array</span>
                         </a>
                         
                     </div>
@@ -462,8 +468,8 @@ ssh-keygen -t rsa -C &#34;your2@email.com&#34;
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                        <a href="/categories/git/" class="post-category" target="_blank">
-                            git
+                        <a href="/categories/切片-slice/" class="post-category" target="_blank">
+                            切片(slice)
                         </a>
                         
                     </div>
@@ -474,7 +480,7 @@ ssh-keygen -t rsa -C &#34;your2@email.com&#34;
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-08-11
+                    2021-09-22
                 </div>
 
                 <div class="post-author info-break-policy">
@@ -488,14 +494,14 @@ ssh-keygen -t rsa -C &#34;your2@email.com&#34;
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    164
+                    1.5k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    6 分
                 </div>
                 
                 
@@ -511,31 +517,133 @@ ssh-keygen -t rsa -C &#34;your2@email.com&#34;
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h4 id="生成SSH"><a href="#生成SSH" class="headerlink" title="生成SSH"></a>生成SSH</h4><p>第一个账号生成ssh key</p>
-<pre class="line-numbers language-sh"><code class="language-sh">ssh-keygen -t rsa -C "your1@email.com"<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>第二个账号生成ssh key</p>
-<pre class="line-numbers language-sh"><code class="language-sh">ssh-keygen -t rsa -C "your2@email.com"<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<h4 id="部署SSH-KEY"><a href="#部署SSH-KEY" class="headerlink" title="部署SSH KEY"></a>部署SSH KEY</h4><p>在GitLab/GitHub上部署SSH KEY</p>
-<h4 id="创建配置文件"><a href="#创建配置文件" class="headerlink" title="创建配置文件"></a>创建配置文件</h4><p>新建config没有后缀名</p>
-<h5 id="配置说明"><a href="#配置说明" class="headerlink" title="配置说明"></a>配置说明</h5><pre class="line-numbers language-sh"><code class="language-sh">Host    　　主机别名
-HostName　　服务器真实地址
-IdentityFile　　私钥文件路径
-PreferredAuthentications　　认证方式
-User　　用户名<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h5 id="配置内容"><a href="#配置内容" class="headerlink" title="配置内容"></a>配置内容</h5><pre class="line-numbers language-sh"><code class="language-sh"># 别名可以随意写 服务器真实地址是ip就是ip 是域名就是域名
-# 配置Github账号
-Host user1.github.com
-HostName github.com
-IdentityFile C:\\Users\\TheAnswer\\.ssh\\id_rsa
-PreferredAuthentications publickey
-User user1
-
-# 配置GitLab
-Host xxxx
-HostName xx.xx.xx.xx
-IdentityFile C:\\Users\\TheAnswer\\.ssh\\id_rsa2
-PreferredAuthentications publickey
-User user2<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+                <h4 id="切片操作"><a href="#切片操作" class="headerlink" title="切片操作"></a>切片操作</h4><p>在Python中，<strong>切片</strong>是对序列型对象的一种高级索引方法。普通索引只能取出序列中<strong>一个下标</strong>对应的元素，而切片取出序列中一个范围对应的元素。</p>
+<p><em>序列型对象：list列表、string字符串、tuple元组，</em></p>
+<h4 id="切片的格式以List为例"><a href="#切片的格式以List为例" class="headerlink" title="切片的格式以List为例"></a>切片的格式以List为例</h4><h5 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h5><pre><code>切片是对列表进行截取操作。</code></pre><h5 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h5><p>简单切片<code>list[start:stop]</code><br>扩展切片<code>list[start:stop:step]</code></p>
+<h5 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h5><p>start – 列表需要开始切片位置的下标(截取时不包括下标对应的元素)，若为缺省值，那么默认从列表下标为0处开始切片；</p>
+<p>stop – 切片所需要切到的最终位置的下标（截取时包括该下标对应的元素），若为缺省值，那么默认截取至列表的最后一个元素（包括该元素）；</p>
+<p>step – 表示切片截取时的步幅，若为缺省值，那么默认为1。</p>
+<h5 id="基本索引"><a href="#基本索引" class="headerlink" title="基本索引"></a>基本索引</h5><table>
+<thead>
+<tr>
+<th>nums中的元素</th>
+<th align="center">0</th>
+<th align="right">1</th>
+<th align="right">2</th>
+<th align="right">3</th>
+<th align="right">4</th>
+<th align="right">5</th>
+<th align="right">6</th>
+<th align="right">7</th>
+<th align="right">8</th>
+<th align="right">9</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>正下标</td>
+<td align="center">nums[0]</td>
+<td align="right">nums[1]</td>
+<td align="right">nums[2]</td>
+<td align="right">nums[3]</td>
+<td align="right">nums[4]</td>
+<td align="right">nums[5]</td>
+<td align="right">nums[6]</td>
+<td align="right">nums[7]</td>
+<td align="right">nums[8]</td>
+<td align="right">nums[9]</td>
+</tr>
+<tr>
+<td>负下标</td>
+<td align="center">nums[-10]</td>
+<td align="right">nums[-9]</td>
+<td align="right">nums[-8]</td>
+<td align="right">nums[-7]</td>
+<td align="right">nums[-6]</td>
+<td align="right">nums[-5]</td>
+<td align="right">nums[-4]</td>
+<td align="right">nums[-3]</td>
+<td align="right">nums[-2]</td>
+<td align="right">nums[-1]</td>
+</tr>
+</tbody></table>
+<h5 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h5><pre class="line-numbers language-sh"><code class="language-sh">    nums=[0,1,2,3,4,5,6,7,8,9]
+    print('nums[5:9]-start、end都存在step缺省。从nums[5]开始step为1取到nums[9]结束，其结果不包括nums[9]这个元素。',nums[5:9])
+    print('nums[5:]-end缺省。从nums[5]开始step为1取到nums[9]结束，其结果包括nums[9]这个元素。',nums[5:])
+    print('nums[:9]-start缺省。从nums[0]开始step为1取到nums[9]结束，其结果不包括nums[9]这个元素。',nums[:9])
+    print('nums[::2]-end缺省、start缺省、step为2。从nums[0]开始每隔两个元素取数，取到nums[9]结束。',nums[::2])
+    print('nums[::-2]-end缺省、start缺省、step为-2。step为负值从右往左取，从nums[9]开始每隔两个元素取数，取到nums[0]。',nums[::-2])
+    print('nums[:-1]-start缺省、end为负值。从nums[0]开始step为1取到nums[-1]结束，其结果不包括nums[-1]。',nums[:-1])
+    print('nums[-10:]-end缺省、start为负值。从nums[-10]开始step为1取到nums[9]结束，其结果包括nums[9]。',nums[-10:])   <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h5 id="输出结果"><a href="#输出结果" class="headerlink" title="输出结果"></a>输出结果</h5><pre class="line-numbers language-sh"><code class="language-sh">nums[5:9]-start、end都存在step缺省。从nums[5]开始step为1取到nums[9]结束，其结果不包括nums[9]这个元素。 [5, 6, 7, 8]
+nums[5:]-end缺省。从nums[5]开始step为1取到nums[9]结束，其结果包括nums[9]这个元素。 [5, 6, 7, 8, 9]
+nums[:9]-start缺省。从nums[0]开始step为1取到nums[9]结束，其结果不包括nums[9]这个元素。 [0, 1, 2, 3, 4, 5, 6, 7, 8]
+nums[::2]-end缺省、start缺省、step为2。从nums[0]开始每隔两个元素取数，取到nums[9]结束。 [0, 2, 4, 6, 8]
+nums[::-2]-end缺省、start缺省、step为-2。step为负值从右往左取，从nums[9]开始每隔两个元素取数，取到nums[0]。 [9, 7, 5, 3, 1]
+nums[:-1]-start缺省、end为负值。从nums[0]开始step为1取到nums[-1]结束，其结果不包括nums[-1]。 [0, 1, 2, 3, 4, 5, 6, 7, 8]
+nums[-10:]-end缺省、start为负值。从nums[-10]开始step为1取到nums[9]结束，其结果包括nums[9]。 [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="常见的切片形式"><a href="#常见的切片形式" class="headerlink" title="常见的切片形式"></a>常见的切片形式</h4><h5 id="列表的复制"><a href="#列表的复制" class="headerlink" title="列表的复制"></a>列表的复制</h5><pre class="line-numbers language-sh"><code class="language-sh">list1 = [0,1,2,3,4,5,6,7,8,9]
+list2 = list1[:]
+print('list2:',list2)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>输出结果</p>
+<pre class="line-numbers language-sh"><code class="language-sh">list2: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h5 id="列表的翻转"><a href="#列表的翻转" class="headerlink" title="列表的翻转"></a>列表的翻转</h5><pre class="line-numbers language-sh"><code class="language-sh">list = [0,1,2,3,4,5,6,7,8,9]
+print('list翻转:',list[::-1])<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>输出结果</p>
+<pre class="line-numbers language-sh"><code class="language-sh">list翻转: [9, 8, 7, 6, 5, 4, 3, 2, 1, 0]<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h4 id="旋转数组"><a href="#旋转数组" class="headerlink" title="旋转数组"></a>旋转数组</h4><p><strong>题目:</strong><br><strong>给你一个数组，将数组中的元素向右轮转 k 个位置，其中 k 是非负数。</strong></p>
+<p>示例：</p>
+<pre class="line-numbers language-sh"><code class="language-sh">输入:nums=[1,2,3,4,5,6,7], k=3
+输出:[5,6,7,1,2,3,4]
+解释:
+向右轮转1步:[7,1,2,3,4,5,6]
+向右轮转2步:[6,7,1,2,3,4,5]
+向右轮转3步:[5,6,7,1,2,3,4]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><img src="rotate.png" alt="目录结构"></p>
+<p><em>思路：</em><br><em>向右轮转K个位置，如果K大于数组长度len(nums),那么实际轮转k%len(nums)个位置。如果实际轮转的k%len(nums)个位置，那么就相当于把后k%len(nums)个元素按原来的顺序轮转到前面，第nums[n-k]轮转到最后一个位置,这里可以理解成两段list改变位置，第一段nums[n-k:],第二段nums[:n-k],这里nums[:n-k]不会取到nums[n-k]而nums[n-k:]会取到n-k</em></p>
+<pre class="line-numbers language-sh"><code class="language-sh">class Solution:
+    def rotate(self, nums: List[int], k: int) -> None:
+        """
+        Do not return anything, modify nums in-place instead.
+        """
+        n=len(nums)
+        k=k%n
+        #nums = nums[n-k:]+nums[:n-k]
+        nums[:] = nums[n-k:]+nums[:n-k]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><strong><em>注意</em></strong><br>这个位置nums[:] = nums[n-k:]+nums[:n-k]，一开始是nums = nums[n-k:]+nums[:n-k]这样写的，但是一直返回的是原数组这里要把自己解释清楚。</p>
+<p><strong><em>nums和nums[:]</em></strong><br><em>nums = A： 更改nums这一变量名所指的对象，让nums变量指向A所指向的对象。<br>nums[:] = A： 对nums指向的对象赋值，把A变量指向的对象的值逐个复制到nums指向的对象中并覆盖nums指向的对象的原来值。</em></p>
+<p><a href="https://zag666.blog.csdn.net/article/details/122896112?spm=1001.2101.3001.6650.7&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EOPENSEARCH%7ERate-7-122896112-blog-124011786.pc_relevant_aa&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EOPENSEARCH%7ERate-7-122896112-blog-124011786.pc_relevant_aa&utm_relevant_index=8" target="_blank" rel="noopener">参考出处</a></p>
+<pre class="line-numbers language-sh"><code class="language-sh">nums=[0,1,2,3,4,5,6,7,8,9]
+print(id(nums[:]),nums[:])
+for i in nums[:]:
+    print(i,id(i))
+print(id(nums),nums)
+for a in nums:
+    print(a,id(a))
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>输出结果</p>
+<pre class="line-numbers language-sh"><code class="language-sh">2549611697480 [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+0 140713551756320
+1 140713551756352
+2 140713551756384
+3 140713551756416
+4 140713551756448
+5 140713551756480
+6 140713551756512
+7 140713551756544
+8 140713551756576
+9 140713551756608
+2549611697288 [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+0 140713551756320
+1 140713551756352
+2 140713551756384
+3 140713551756416
+4 140713551756448
+5 140713551756480
+6 140713551756512
+7 140713551756544
+8 140713551756576
+9 140713551756608<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><em>这里可以看出nums和nums[:] 地址不同，但是他们指向的元素地址相同，而nums = nums[n-k:]+nums[:n-k]方式会改变nums原地址，如果按照原地址去取值就得不到改变后的结果。nums[:] = nums[n-k:]+nums[:n-k]这种方式不会改变nums对象的地址，但是却改变的对象list中的值，这样如果用nums的对象地址去取会得到原来的list</em></p>
 
             </div>
             <hr />
@@ -694,9 +802,9 @@ User user2<span aria-hidden="true" class="line-numbers-rows"><span></span><span>
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《配置多个git》
+                    《pythonSection》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2021/08/11/pei-zhi-duo-ge-git/" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2021/09/22/pythonsection/" property="cc:attributionName"
                rel="cc:attributionURL">
                 TheAnswer
             </a> 采用
@@ -737,7 +845,7 @@ User user2<span aria-hidden="true" class="line-numbers-rows"><span></span><span>
         repo: 'angeloTheAnswer.github.io',
         owner: 'angeloTheAnswer',
         admin: "TheAnswer",
-        id: '2021/08/11/pei-zhi-duo-ge-git/',
+        id: '2021/09/22/pythonsection/',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -1020,41 +1128,43 @@ User user2<span aria-hidden="true" class="line-numbers-rows"><span></span><span>
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2021/09/07/maxprofit/">
+                <a href="/2021/09/22/pythonsection/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="maxProfit">
+                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="pythonSection">
                         
-                        <span class="card-title">maxProfit</span>
+                        <span class="card-title">pythonSection</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            上升区间求和
+                            python切片操作
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2021-09-07
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2021-09-22
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Solution/" class="post-category" target="_blank">
-                                    Solution
+                            <a href="/categories/切片-slice/" class="post-category" target="_blank">
+                                    切片(slice)
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -1081,31 +1191,31 @@ User user2<span aria-hidden="true" class="line-numbers-rows"><span></span><span>
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/06/13/pytest/">
+                <a href="/2021/09/07/maxprofit/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="pytest接口自动化框架搭建">
+                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="maxProfit">
                         
-                        <span class="card-title">pytest接口自动化框架搭建</span>
+                        <span class="card-title">maxProfit</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            pytest & 接口自动化
+                            上升区间求和
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2021-06-13
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2021-09-07
                             </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/pytest/" class="post-category" target="_blank">
-                                    pytest
+                            <a href="/categories/Solution/" class="post-category" target="_blank">
+                                    Solution
                                 </a>
                             
                             
@@ -1119,12 +1229,12 @@ User user2<span aria-hidden="true" class="line-numbers-rows"><span></span><span>
                         <span class="chip bg-color">python</span>
                     </a>
                     
-                    <a href="/tags/自动化/" target="_blank">
-                        <span class="chip bg-color">自动化</span>
+                    <a href="/tags/Solution/" target="_blank">
+                        <span class="chip bg-color">Solution</span>
                     </a>
                     
-                    <a href="/tags/pytest/" target="_blank">
-                        <span class="chip bg-color">pytest</span>
+                    <a href="/tags/Array/" target="_blank">
+                        <span class="chip bg-color">Array</span>
                     </a>
                     
                 </div>
