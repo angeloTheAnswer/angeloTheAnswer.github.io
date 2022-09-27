@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>allureTitle</title>
+      <link href="/2021/09/27/alluretitle/"/>
+      <url>/2021/09/27/alluretitle/</url>
+      
+        <content type="html"><![CDATA[<p><strong>遇到的问题：给allure报告中的case加上标题后发现显示有点问题</strong></p><p><img src="title.png" alt="修改前"></p><p><strong>解决方法：</strong><br>修改allure_pytest中的listener.py<br>文件位置Lib\site-packages\allure_pytest\listener.py</p><p>修改下面代码</p><pre class="line-numbers language-sh"><code class="language-sh">    test_result.parameters.extend(        [Parameter(name=name, value=represent(value)) for name, value in params.items()])<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p>为</p><pre class="line-numbers language-sh"><code class="language-sh">    test_result.parameters.extend([])<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p><strong>修改后的效果</strong><br><img src="uptitle.png" alt="修改后"></p><p><a href="https://www.cnblogs.com/shukeshu/p/15777918.html" target="_blank" rel="noopener">参考出处</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> allure.dynamic.title </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> python </tag>
+            
+            <tag> pytest </tag>
+            
+            <tag> Allure </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>pythonSection</title>
       <link href="/2021/09/22/pythonsection/"/>
       <url>/2021/09/22/pythonsection/</url>
@@ -105,9 +134,9 @@
             
             <tag> python </tag>
             
-            <tag> 自动化 </tag>
-            
             <tag> pytest </tag>
+            
+            <tag> 自动化 </tag>
             
         </tags>
       

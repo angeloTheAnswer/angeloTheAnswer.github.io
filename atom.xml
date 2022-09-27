@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2022-09-23T02:21:04.913Z</updated>
+  <updated>2022-09-27T03:29:36.715Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>allureTitle</title>
+    <link href="http://yoursite.com/2021/09/27/alluretitle/"/>
+    <id>http://yoursite.com/2021/09/27/alluretitle/</id>
+    <published>2021-09-27T02:54:42.000Z</published>
+    <updated>2022-09-27T03:29:36.715Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;strong&gt;遇到的问题：给allure报告中的case加上标题后发现显示有点问题&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;title.png&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="allure.dynamic.title" scheme="http://yoursite.com/categories/allure-dynamic-title/"/>
+    
+    
+      <category term="python" scheme="http://yoursite.com/tags/python/"/>
+    
+      <category term="pytest" scheme="http://yoursite.com/tags/pytest/"/>
+    
+      <category term="Allure" scheme="http://yoursite.com/tags/Allure/"/>
+    
+  </entry>
   
   <entry>
     <title>pythonSection</title>
@@ -128,9 +159,9 @@
     
       <category term="python" scheme="http://yoursite.com/tags/python/"/>
     
-      <category term="自动化" scheme="http://yoursite.com/tags/%E8%87%AA%E5%8A%A8%E5%8C%96/"/>
-    
       <category term="pytest" scheme="http://yoursite.com/tags/pytest/"/>
+    
+      <category term="自动化" scheme="http://yoursite.com/tags/%E8%87%AA%E5%8A%A8%E5%8C%96/"/>
     
   </entry>
   
