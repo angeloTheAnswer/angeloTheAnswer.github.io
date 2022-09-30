@@ -4,12 +4,12 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="work, TheAnswer">
+    <meta name="keywords" content="decoratorPython, TheAnswer">
     <meta name="baidu-site-verification" content="fmlEuI34ir">
     <meta name="google-site-verification" content="yCy2azpds5XSuGZvis6OuA-XIGF5GuGpYRAaGfD6o48">
     <meta name="360-site-verification" content="b7c11a830ef90fd1464ad6206bb7b6e7">
-    <meta name="description" content="测试测试
-">
+    <meta name="description" content="为什么会存在装饰器在Python中一切都是对象：一个实例是一个对象，一个函数也是一个对象，甚至类本身也是一个对象。在Python中，可以将一个函数作为参数传递给另一个函数，也可以将一个类作为参数传递给一个函数。
+Python中的特殊功能：在">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +17,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>work | TheAnswer的博客</title>
+    <title>decoratorPython | TheAnswer的博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -330,13 +330,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/25.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/20.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        work
+                        decoratorPython
                     </div>
                 </div>
             </div>
@@ -447,8 +447,16 @@
                     
                     <div class="article-tag">
                         
-                        <a href="/tags/problem/" target="_blank">
-                            <span class="chip bg-color">problem</span>
+                        <a href="/tags/python/" target="_blank">
+                            <span class="chip bg-color">python</span>
+                        </a>
+                        
+                        <a href="/tags/装饰器/" target="_blank">
+                            <span class="chip bg-color">装饰器</span>
+                        </a>
+                        
+                        <a href="/tags/特性/" target="_blank">
+                            <span class="chip bg-color">特性</span>
                         </a>
                         
                     </div>
@@ -456,13 +464,22 @@
                 </div>
                 <div class="col s5 right-align">
                     
+                    <div class="post-cate">
+                        <i class="fa fa-bookmark fa-fw icon-category"></i>
+                        
+                        <a href="/categories/python装饰器/" class="post-category" target="_blank">
+                            python装饰器
+                        </a>
+                        
+                    </div>
+                    
                 </div>
             </div>
 
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-12-02
+                    2021-09-23
                 </div>
 
                 <div class="post-author info-break-policy">
@@ -476,7 +493,7 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    4
+                    426
                 </div>
                 
 
@@ -499,7 +516,49 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h4 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h4><p>测试</p>
+                <h4 id="为什么会存在装饰器"><a href="#为什么会存在装饰器" class="headerlink" title="为什么会存在装饰器"></a>为什么会存在装饰器</h4><p><strong>在Python中一切都是对象：</strong><br>一个实例是一个对象，一个函数也是一个对象，甚至类本身也是一个对象。<br>在Python中，可以将一个函数作为参数传递给另一个函数，也可以将一个类作为参数传递给一个函数。</p>
+<p><strong>Python中的特殊功能：</strong><br>在Python中，函数可以作为一个参数传递给另一个函数，也可以在函数中返回一个函数，还可以在函数内部在定义函数。</p>
+<p><strong><em>以上是函数可以被装饰的关键</em></strong></p>
+<h4 id="装饰器修饰函数"><a href="#装饰器修饰函数" class="headerlink" title="装饰器修饰函数"></a>装饰器修饰函数</h4><p><strong>装饰器的作用：</strong><br>包装一个函数，并改变（拓展）他的行为</p>
+<p><strong>示例</strong></p>
+<pre class="line-numbers language-sh"><code class="language-sh">import logging
+logging.basicConfig(level=logging.INFO)
+
+def loggingDecorator(func): # 装饰函数
+'''记录日志的装饰器'''
+    def wrapperLogging(*args,**kwargs): # 包装函数
+        logging.info("开始执行%s()...",func.__name__)
+        func(*args,**kwargs)
+        logging.info("%s()执行完成！",func.__name__)
+    return wrapperLogging
+
+@loggingDecorator # 表示用loggingDecorator装饰器来修饰showMin函数
+def showMin(a,b):
+    print("%d、%d 中的最小值是：%d" %(a,b,a if a < b else b ) )
+showMin(2,3)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="装饰器修饰类"><a href="#装饰器修饰类" class="headerlink" title="装饰器修饰类"></a>装饰器修饰类</h4><p>装饰器可以是一个函数，也可以是一个类（必须要实现<strong>call</strong>方法，使其是callable的）。同时装饰器不仅可以修改一个函数，还可以修饰一个类</p>
+<p><strong>示例</strong></p>
+<pre class="line-numbers language-sh"><code class="language-sh">class ClassDecorator:
+    '''类装饰器，记录一个类被实例化的次数'''
+    def __init__(self,func):
+        self.__numOfCall = 0
+        self.__func = func 
+    def __call__(self, *args, **kwds):
+        self.__numOfCall+=1
+        obj = self.__func(*args, **kwds)
+        print("创建%s的第%d个实例:%s"%(self.__func.__name__, self.__numOfCall,id(obj)))
+        return obj
+
+@ClassDecorator
+class TestClass:
+    def __init__(self,name):
+        self.__name = name
+    def getName(self):
+        return self.__name
+tester01 = TestClass("Test01")
+tester02 = TestClass("Test02")
+print(id(tester01))
+print(id(tester02))<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
             </div>
             <hr />
@@ -658,9 +717,9 @@
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《work》
+                    《decoratorPython》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2020/12/02/work/" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2021/09/23/decoratorpython/" property="cc:attributionName"
                rel="cc:attributionURL">
                 TheAnswer
             </a> 采用
@@ -701,7 +760,7 @@
         repo: 'angeloTheAnswer.github.io',
         owner: 'angeloTheAnswer',
         admin: "TheAnswer",
-        id: '2020/12/02/work/',
+        id: '2021/09/23/decoratorpython/',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -988,31 +1047,31 @@
             <div class="article-badge left-badge text-color">
                 <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/06/13/pytest/">
+                <a href="/2021/09/27/alluretitle/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="pytest接口自动化框架搭建">
+                        <img src="/medias/featureimages/24.jpg" class="responsive-img" alt="allureTitle">
                         
-                        <span class="card-title">pytest接口自动化框架搭建</span>
+                        <span class="card-title">allureTitle</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            pytest & 接口自动化
+                            allure报告Title显示问题处理
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2021-06-13
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2021-09-27
                         </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/pytest/" class="post-category" target="_blank">
-                                    pytest
+                            <a href="/categories/allure-dynamic-title/" class="post-category" target="_blank">
+                                    allure.dynamic.title
                                 </a>
                             
                             
@@ -1030,8 +1089,8 @@
                         <span class="chip bg-color">pytest</span>
                     </a>
                     
-                    <a href="/tags/自动化/" target="_blank">
-                        <span class="chip bg-color">自动化</span>
+                    <a href="/tags/Allure/" target="_blank">
+                        <span class="chip bg-color">Allure</span>
                     </a>
                     
                 </div>
@@ -1045,31 +1104,31 @@
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/12/01/removeduplicates/">
+                <a href="/2021/09/22/pythonsection/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="removeDuplicates">
+                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="pythonSection">
                         
-                        <span class="card-title">removeDuplicates</span>
+                        <span class="card-title">pythonSection</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            删除排序数组中的重复项
+                            python切片操作
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-12-01
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2021-09-22
                             </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Solution/" class="post-category" target="_blank">
-                                    Solution
+                            <a href="/categories/切片-slice/" class="post-category" target="_blank">
+                                    切片(slice)
                                 </a>
                             
                             

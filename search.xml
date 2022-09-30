@@ -33,6 +33,35 @@
     
     
     <entry>
+      <title>decoratorPython</title>
+      <link href="/2021/09/23/decoratorpython/"/>
+      <url>/2021/09/23/decoratorpython/</url>
+      
+        <content type="html"><![CDATA[<h4 id="为什么会存在装饰器"><a href="#为什么会存在装饰器" class="headerlink" title="为什么会存在装饰器"></a>为什么会存在装饰器</h4><p><strong>在Python中一切都是对象：</strong><br>一个实例是一个对象，一个函数也是一个对象，甚至类本身也是一个对象。<br>在Python中，可以将一个函数作为参数传递给另一个函数，也可以将一个类作为参数传递给一个函数。</p><p><strong>Python中的特殊功能：</strong><br>在Python中，函数可以作为一个参数传递给另一个函数，也可以在函数中返回一个函数，还可以在函数内部在定义函数。</p><p><strong><em>以上是函数可以被装饰的关键</em></strong></p><h4 id="装饰器修饰函数"><a href="#装饰器修饰函数" class="headerlink" title="装饰器修饰函数"></a>装饰器修饰函数</h4><p><strong>装饰器的作用：</strong><br>包装一个函数，并改变（拓展）他的行为</p><p><strong>示例</strong></p><pre class="line-numbers language-sh"><code class="language-sh">import logginglogging.basicConfig(level=logging.INFO)def loggingDecorator(func): # 装饰函数'''记录日志的装饰器'''    def wrapperLogging(*args,**kwargs): # 包装函数        logging.info("开始执行%s()...",func.__name__)        func(*args,**kwargs)        logging.info("%s()执行完成！",func.__name__)    return wrapperLogging@loggingDecorator # 表示用loggingDecorator装饰器来修饰showMin函数def showMin(a,b):    print("%d、%d 中的最小值是：%d" %(a,b,a if a < b else b ) )showMin(2,3)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h4 id="装饰器修饰类"><a href="#装饰器修饰类" class="headerlink" title="装饰器修饰类"></a>装饰器修饰类</h4><p>装饰器可以是一个函数，也可以是一个类（必须要实现<strong>call</strong>方法，使其是callable的）。同时装饰器不仅可以修改一个函数，还可以修饰一个类</p><p><strong>示例</strong></p><pre class="line-numbers language-sh"><code class="language-sh">class ClassDecorator:    '''类装饰器，记录一个类被实例化的次数'''    def __init__(self,func):        self.__numOfCall = 0        self.__func = func     def __call__(self, *args, **kwds):        self.__numOfCall+=1        obj = self.__func(*args, **kwds)        print("创建%s的第%d个实例:%s"%(self.__func.__name__, self.__numOfCall,id(obj)))        return obj@ClassDecoratorclass TestClass:    def __init__(self,name):        self.__name = name    def getName(self):        return self.__nametester01 = TestClass("Test01")tester02 = TestClass("Test02")print(id(tester01))print(id(tester02))<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> python装饰器 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> python </tag>
+            
+            <tag> 装饰器 </tag>
+            
+            <tag> 特性 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>pythonSection</title>
       <link href="/2021/09/22/pythonsection/"/>
       <url>/2021/09/22/pythonsection/</url>
