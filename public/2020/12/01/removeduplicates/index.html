@@ -492,7 +492,7 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    781
+                    782
                 </div>
                 
 
@@ -518,7 +518,7 @@
                 <p><strong>题目:</strong><br><strong>给你一个 升序排列 的数组 nums ，请你 原地 删除重复出现的元素，使每个元素 只出现一次 ，返回删除后数组的新长度。元素的 相对顺序 应该保持 一致 。</strong><br><strong>由于在某些语言中不能改变数组的长度，所以必须将结果放在数组nums的第一部分。更规范地说，如果在删除重复项之后有 k 个元素，那么 nums 的前 k 个元素应该保存最终结果。</strong><br><strong>将最终结果插入 nums 的前 k 个位置后返回 k 。</strong><br><strong>不要使用额外的空间，你必须在 原地 修改输入数组 并在使用 <code>O(1)</code> 额外空间的条件下完成。</strong></p>
 <pre class="line-numbers language-sh"><code class="language-sh">class Solution(object):
     def removeDuplicates(self,nums: List[int]) -> int:
-        for i in range(len(nums),0,-1):
+        for i in range(len(nums)-1,0,-1):
             if nums[i] == nums[i-1]:
                 del(nums[i])
         return len(nums)        <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
@@ -1306,7 +1306,7 @@ del()操作后数组的内容 ['a', 'c']<span aria-hidden="true" class="line-num
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">7.3k</span>
+            <span class="white-color">10.7k</span>
             
 
             <br>

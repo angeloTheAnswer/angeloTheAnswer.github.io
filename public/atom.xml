@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2022-08-12T03:14:01.576Z</updated>
+  <updated>2022-10-24T03:32:16.837Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,155 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>InterviewQuestions</title>
+    <link href="http://yoursite.com/2021/10/11/interviewquestions/"/>
+    <id>http://yoursite.com/2021/10/11/interviewquestions/</id>
+    <published>2021-10-11T04:14:22.000Z</published>
+    <updated>2022-10-24T03:32:16.837Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h4 id=&quot;字符串切换大小写&quot;&gt;&lt;a href=&quot;#字符串切换大小写&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Answer" scheme="http://yoursite.com/categories/Answer/"/>
+    
+    
+      <category term="python" scheme="http://yoursite.com/tags/python/"/>
+    
+      <category term="InterviewQuestions" scheme="http://yoursite.com/tags/InterviewQuestions/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>allureTitle</title>
+    <link href="http://yoursite.com/2021/09/27/alluretitle/"/>
+    <id>http://yoursite.com/2021/09/27/alluretitle/</id>
+    <published>2021-09-27T02:54:42.000Z</published>
+    <updated>2022-09-27T03:29:36.715Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;strong&gt;遇到的问题：给allure报告中的case加上标题后发现显示有点问题&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;title.png&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="allure.dynamic.title" scheme="http://yoursite.com/categories/allure-dynamic-title/"/>
+    
+    
+      <category term="python" scheme="http://yoursite.com/tags/python/"/>
+    
+      <category term="pytest" scheme="http://yoursite.com/tags/pytest/"/>
+    
+      <category term="Allure" scheme="http://yoursite.com/tags/Allure/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>decoratorPython</title>
+    <link href="http://yoursite.com/2021/09/23/decoratorpython/"/>
+    <id>http://yoursite.com/2021/09/23/decoratorpython/</id>
+    <published>2021-09-23T08:43:51.000Z</published>
+    <updated>2022-09-30T06:30:29.599Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h4 id=&quot;为什么会存在装饰器&quot;&gt;&lt;a href=&quot;#为什么会存在装饰器&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="python装饰器" scheme="http://yoursite.com/categories/python%E8%A3%85%E9%A5%B0%E5%99%A8/"/>
+    
+    
+      <category term="python" scheme="http://yoursite.com/tags/python/"/>
+    
+      <category term="装饰器" scheme="http://yoursite.com/tags/%E8%A3%85%E9%A5%B0%E5%99%A8/"/>
+    
+      <category term="特性" scheme="http://yoursite.com/tags/%E7%89%B9%E6%80%A7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>pythonSection</title>
+    <link href="http://yoursite.com/2021/09/22/pythonsection/"/>
+    <id>http://yoursite.com/2021/09/22/pythonsection/</id>
+    <published>2021-09-22T10:55:33.000Z</published>
+    <updated>2022-09-23T02:21:04.913Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h4 id=&quot;切片操作&quot;&gt;&lt;a href=&quot;#切片操作&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="切片(slice)" scheme="http://yoursite.com/categories/%E5%88%87%E7%89%87-slice/"/>
+    
+    
+      <category term="python" scheme="http://yoursite.com/tags/python/"/>
+    
+      <category term="Solution" scheme="http://yoursite.com/tags/Solution/"/>
+    
+      <category term="Array" scheme="http://yoursite.com/tags/Array/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>maxProfit</title>
+    <link href="http://yoursite.com/2021/09/07/maxprofit/"/>
+    <id>http://yoursite.com/2021/09/07/maxprofit/</id>
+    <published>2021-09-07T11:17:35.000Z</published>
+    <updated>2022-10-11T08:40:22.787Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;strong&gt;题目:&lt;/strong&gt;&lt;br&gt;&lt;strong&gt;给你一个整数数组 prices ，其中 prices[i] 表示某支股票第 i 天的价格。&lt;/strong&gt;&lt;br&gt;&lt;strong&gt;在每一天，你可以决定是否购买和/或出售股票。你在任何时候 最多 只能持有
+        
+      
+    
+    </summary>
+    
+      <category term="Solution" scheme="http://yoursite.com/categories/Solution/"/>
+    
+    
+      <category term="python" scheme="http://yoursite.com/tags/python/"/>
+    
+      <category term="Solution" scheme="http://yoursite.com/tags/Solution/"/>
+    
+      <category term="Array" scheme="http://yoursite.com/tags/Array/"/>
+    
+  </entry>
   
   <entry>
     <title>配置多个git</title>
@@ -48,7 +197,7 @@
     <link href="http://yoursite.com/2021/06/13/pytest/"/>
     <id>http://yoursite.com/2021/06/13/pytest/</id>
     <published>2021-06-13T13:13:30.000Z</published>
-    <updated>2022-07-22T05:49:03.232Z</updated>
+    <updated>2022-10-11T08:40:32.040Z</updated>
     
     <summary type="html">
     
@@ -68,9 +217,9 @@
     
       <category term="python" scheme="http://yoursite.com/tags/python/"/>
     
-      <category term="自动化" scheme="http://yoursite.com/tags/%E8%87%AA%E5%8A%A8%E5%8C%96/"/>
-    
       <category term="pytest" scheme="http://yoursite.com/tags/pytest/"/>
+    
+      <category term="自动化" scheme="http://yoursite.com/tags/%E8%87%AA%E5%8A%A8%E5%8C%96/"/>
     
   </entry>
   
@@ -103,7 +252,7 @@
     <link href="http://yoursite.com/2020/12/01/removeduplicates/"/>
     <id>http://yoursite.com/2020/12/01/removeduplicates/</id>
     <published>2020-12-01T04:19:02.000Z</published>
-    <updated>2022-08-22T08:07:32.588Z</updated>
+    <updated>2022-09-09T01:36:52.097Z</updated>
     
     <summary type="html">
     

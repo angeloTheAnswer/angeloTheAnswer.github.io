@@ -516,3 +516,13 @@ class TestDemoClass:
 
 #### 断言
 assert
+
+
+#### allure 报告
+
+##### allure.dynamic.severity
+blocker：阻塞缺陷（功能未实现，无法下一步）
+critical：严重缺陷（功能点缺失）
+normal： 一般缺陷（边界情况，格式错误）
+minor：次要缺陷（界面错误与ui需求不符）
+trivial： 轻微缺陷（必须项无提示，或者提示不规范）
