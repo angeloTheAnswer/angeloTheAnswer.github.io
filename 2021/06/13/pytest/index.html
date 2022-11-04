@@ -331,7 +331,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/4.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/8.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -494,14 +494,14 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    3.2k
+                    4.2k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    13 分
+                    18 分
                 </div>
                 
                 
@@ -527,7 +527,7 @@
 <h5 id="allure测试报告安装"><a href="#allure测试报告安装" class="headerlink" title="allure测试报告安装"></a>allure测试报告安装</h5><p>1、下载、解压<br>下载地址：<a href="https://github.com/allure-framework/allure2/" target="_blank" rel="noopener">https://github.com/allure-framework/allure2/</a>  releases<br>2、配置环境变量<br>在系统环境变量后追加解压路径 例如：E:\allure-2.13.7\bin<br>3、验证是否安装成功：<br>分别在dos和pycharm中验证    </p>
 <pre class="line-numbers language-sh"><code class="language-sh">allure --version<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p><strong><em>注意：dos可以验证成功但是pycharm验证失败需重启pycharm</em></strong></p>
-<h4 id="jpype测试报告安装"><a href="#jpype测试报告安装" class="headerlink" title="jpype测试报告安装"></a>jpype测试报告安装</h4><p><em>概述：JPype 是一个能够让 python 代码方便地调用 Java 代码的工具</em><br>1、下载whl包JPype1-1.1.2-cp37-cp37m-win32.whl<br>下载地址：<a href="https://www.lfd.uci.edu/~gohlke/pythonlibs/" target="_blank" rel="noopener">https://www.lfd.uci.edu/~gohlke/pythonlibs/</a><br>2、安装jpype<br>1)命令行进入whl包所在目录<br>2)执行安装命令  </p>
+<h4 id="jpype安装"><a href="#jpype安装" class="headerlink" title="jpype安装"></a>jpype安装</h4><p><em>概述：JPype 是一个能够让 python 代码方便地调用 Java 代码的工具</em><br>1、下载whl包JPype1-1.1.2-cp37-cp37m-win32.whl<br>下载地址：<a href="https://www.lfd.uci.edu/~gohlke/pythonlibs/" target="_blank" rel="noopener">https://www.lfd.uci.edu/~gohlke/pythonlibs/</a><br>2、安装jpype<br>1)命令行进入whl包所在目录<br>2)执行安装命令  </p>
 <pre class="line-numbers language-sh"><code class="language-sh">python -m pip install JPype1-1.1.2-cp37-cp37m-win32.whl<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <h2 id="框架搭建"><a href="#框架搭建" class="headerlink" title="框架搭建"></a>框架搭建</h2><h3 id="框架结构图"><a href="#框架结构图" class="headerlink" title="框架结构图"></a>框架结构图</h3><p><img src="jiagoutu.png" alt="目录结构"></p>
 <h3 id="pytest-ini配置文件"><a href="#pytest-ini配置文件" class="headerlink" title="pytest.ini配置文件"></a>pytest.ini配置文件</h3><p>1、文件位置：一般放在根目录<br>2、文件编码：必须是ANSI，可以使用记事本修改编码格式<br>3、文件作用：改变pytest默认行为<br>4、不管是主函数的模式运行、命令行模式运行，都会去读取这个配置文件<br>5、配置文件</p>
@@ -807,8 +807,202 @@ class TestDemoClass:
         print('\n测试用例2')
         print('------'+str(aaa))
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h4 id="断言"><a href="#断言" class="headerlink" title="断言"></a>断言</h4><p>assert</p>
+<h4 id="断言"><a href="#断言" class="headerlink" title="断言"></a>断言</h4><h5 id="什么是断言："><a href="#什么是断言：" class="headerlink" title="什么是断言："></a>什么是断言：</h5><p>每条case的通过与否都是通过拿实际的测试结果与预期结果进行比较，这比较的过程就是断言。</p>
+<h5 id="Pytest断言"><a href="#Pytest断言" class="headerlink" title="Pytest断言"></a>Pytest断言</h5><p>pytest是使用Python自带的关键字assert来断言的。    </p>
+<h5 id="assert使用方法"><a href="#assert使用方法" class="headerlink" title="assert使用方法"></a>assert使用方法</h5><p>assert关键字后面可以跟一个表达式，只要是表达式结果为True ，断言通过，用例执行成功，否则执行失败。</p>
+<h5 id="断言方式"><a href="#断言方式" class="headerlink" title="断言方式"></a>断言方式</h5><h6 id="比较大小与是否相等"><a href="#比较大小与是否相等" class="headerlink" title="比较大小与是否相等"></a>比较大小与是否相等</h6><p><strong>assert a == b：判断a等于b</strong><br><strong>assert a != b：判断a不等于b</strong><br><strong>assert a &lt; b：判断小于b</strong></p>
+<p>示例</p>
+<pre class="line-numbers language-sh"><code class="language-sh">import pytest
+class TestDemoClass:
+    @pytest.mark.smoke1
+    def test_01_case1(self):
+        print('\n测试用例1')
+        assert 1==1,'断言:是否相等'
+    @pytest.mark.smoke2
+    def test_02_case2(self):
+        print('\n测试用例2')
+        assert 1!=1,'断言:是否不相等'
+    def test_03_case3(self):
+        print('\n测试用例3')
+        assert 1<2,'断言:大小'    
+    def test_04_case4(self):
+        print('\n测试用例4')
+        assert 1>2,'断言:大小'<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>控制台输出</p>
+<pre class="line-numbers language-sh"><code class="language-sh">collected 4 items
+
+testcase/test_demo.py::TestDemoClass::test_01_case1
+测试用例1
+PASSED
+testcase/test_demo.py::TestDemoClass::test_02_case2
+测试用例2
+FAILED
+testcase/test_demo.py::TestDemoClass::test_03_case3
+测试用例3
+PASSED
+testcase/test_demo.py::TestDemoClass::test_04_case4
+测试用例4
+FAILED<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h6 id="判断包含或不包含"><a href="#判断包含或不包含" class="headerlink" title="判断包含或不包含"></a>判断包含或不包含</h6><p><strong>assert a in b：判断b包含a</strong><br><strong>assert a not in b：判断b不包含a</strong></p>
+<p>示例</p>
+<pre class="line-numbers language-sh"><code class="language-sh">import pytest
+class TestDemoClass:
+    @pytest.mark.smoke1
+    def test_01_case1(self):
+        print('\n测试用例1')
+        assert 1==1,'断言:是否相等'
+    @pytest.mark.smoke2
+    def test_02_case2(self):
+        print('\n测试用例2')
+        assert 1!=1,'断言:是否不相等'
+    def test_03_case3(self):
+        print('\n测试用例3')
+        assert 1<2,'断言:大小'    
+    def test_04_case4(self):
+        print('\n测试用例4')
+        assert 1>2,'断言:大小'    
+    def test_05_case4(self):
+        print('\n测试用例5')
+        assert 1 in [1,2],'断言:包含'
+    def test_06_case4(self):
+        print('\n测试用例6')
+        assert 1 not in [1,2],'断言:不包含'    <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>控制台输出</p>
+<pre class="line-numbers language-sh"><code class="language-sh">collected 6 items
+
+testcase/test_demo.py::TestDemoClass::test_01_case1
+测试用例1
+PASSED
+testcase/test_demo.py::TestDemoClass::test_02_case2
+测试用例2
+FAILED
+testcase/test_demo.py::TestDemoClass::test_03_case3
+测试用例3
+PASSED
+testcase/test_demo.py::TestDemoClass::test_04_case4
+测试用例4
+FAILED
+testcase/test_demo.py::TestDemoClass::test_05_case4
+测试用例5
+PASSED
+testcase/test_demo.py::TestDemoClass::test_06_case4
+测试用例6
+FAILED<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h6 id="对类型的判断"><a href="#对类型的判断" class="headerlink" title="对类型的判断"></a>对类型的判断</h6><p><strong>assert isinstance(a,int)：判断a是否是int类型数据</strong><br>示例</p>
+<pre class="line-numbers language-sh"><code class="language-sh">import pytest
+class TestDemoClass:
+    @pytest.mark.smoke1
+    def test_01_case1(self):
+        print('\n测试用例1')
+        assert 1==1,'断言:是否相等'
+    @pytest.mark.smoke2
+    def test_02_case2(self):
+        print('\n测试用例2')
+        assert 1!=1,'断言:是否不相等'
+    def test_03_case3(self):
+        print('\n测试用例3')
+        assert 1<2,'断言:大小'    
+    def test_04_case4(self):
+        print('\n测试用例4')
+        assert 1>2,'断言:大小'    
+    def test_05_case4(self):
+        print('\n测试用例5')
+        assert 1 in [1,2],'断言:包含'
+    def test_06_case4(self):
+        print('\n测试用例6')
+        assert 1 not in [1,2],'断言:不包含'    
+    def test_07_case4(self):
+        print('\n测试用例7')
+        assert isinstance(1,int),'断言:是否是int类型'<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>控制台输出</p>
+<pre class="line-numbers language-sh"><code class="language-sh">collected 7 items
+
+testcase/test_demo.py::TestDemoClass::test_01_case1
+测试用例1
+PASSED
+testcase/test_demo.py::TestDemoClass::test_02_case2
+测试用例2
+FAILED
+testcase/test_demo.py::TestDemoClass::test_03_case3
+测试用例3
+PASSED
+testcase/test_demo.py::TestDemoClass::test_04_case4
+测试用例4
+FAILED
+testcase/test_demo.py::TestDemoClass::test_05_case4
+测试用例5
+PASSED
+testcase/test_demo.py::TestDemoClass::test_06_case4
+测试用例6
+FAILED
+testcase/test_demo.py::TestDemoClass::test_07_case4
+测试用例7
+PASSED<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h6 id="判断方法或者函数的返回值是否为真"><a href="#判断方法或者函数的返回值是否为真" class="headerlink" title="判断方法或者函数的返回值是否为真"></a>判断方法或者函数的返回值是否为真</h6><p><strong>assert xx：判断xx结果为真</strong><br><strong>assert not xx：判断xx结果不为真</strong></p>
+<p>示例</p>
+<pre class="line-numbers language-sh"><code class="language-sh">import pytest
+class TestDemoClass:
+    @pytest.mark.smoke1
+    def test_01_case1(self):
+        print('\n测试用例1')
+        assert 1==1,'断言:是否相等'
+    @pytest.mark.smoke2
+    def test_02_case2(self):
+        print('\n测试用例2')
+        assert 1!=1,'断言:是否不相等'
+    def test_03_case3(self):
+        print('\n测试用例3')
+        assert 1<2,'断言:大小'    
+    def test_04_case4(self):
+        print('\n测试用例4')
+        assert 1>2,'断言:大小'    
+    def test_05_case4(self):
+        print('\n测试用例5')
+        assert 1 in [1,2],'断言:包含'
+    def test_06_case4(self):
+        print('\n测试用例6')
+        assert 1 not in [1,2],'断言:不包含'    
+    def test_07_case4(self):
+        print('\n测试用例7')
+        assert isinstance(1,int),'断言:是否是int类型'        
+    def test_08_case4(self):
+        print('\n测试用例8')
+        assert True,'断言:是否为真'        
+    def test_09_case4(self):
+        print('\n测试用例9')
+        assert not True,'断言:是否不为真'    <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>控制台输出</p>
+<pre class="line-numbers language-sh"><code class="language-sh">collected 9 items
+
+testcase/test_demo.py::TestDemoClass::test_01_case1
+测试用例1
+PASSED
+testcase/test_demo.py::TestDemoClass::test_02_case2
+测试用例2
+FAILED
+testcase/test_demo.py::TestDemoClass::test_03_case3
+测试用例3
+PASSED
+testcase/test_demo.py::TestDemoClass::test_04_case4
+测试用例4
+FAILED
+testcase/test_demo.py::TestDemoClass::test_05_case4
+测试用例5
+PASSED
+testcase/test_demo.py::TestDemoClass::test_06_case4
+测试用例6
+FAILED
+testcase/test_demo.py::TestDemoClass::test_07_case4
+测试用例7
+PASSED
+testcase/test_demo.py::TestDemoClass::test_08_case4
+测试用例8
+PASSED
+testcase/test_demo.py::TestDemoClass::test_09_case4
+测试用例9
+PASSED<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h4 id="allure-报告"><a href="#allure-报告" class="headerlink" title="allure 报告"></a>allure 报告</h4><h5 id="allure-dynamic-severity"><a href="#allure-dynamic-severity" class="headerlink" title="allure.dynamic.severity"></a>allure.dynamic.severity</h5><p>blocker：阻塞缺陷（功能未实现，无法下一步）<br>critical：严重缺陷（功能点缺失）<br>normal： 一般缺陷（边界情况，格式错误）<br>minor：次要缺陷（界面错误与ui需求不符）<br>trivial： 轻微缺陷（必须项无提示，或者提示不规范）</p>
+<p><strong>持续更新中</strong></p>
 
             </div>
             <hr />
@@ -1301,7 +1495,7 @@ class TestDemoClass:
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="配置多个git">
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="配置多个git">
                         
                         <span class="card-title">配置多个git</span>
                     </div>
@@ -1350,7 +1544,7 @@ class TestDemoClass:
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="work">
+                        <img src="/medias/featureimages/25.jpg" class="responsive-img" alt="work">
                         
                         <span class="card-title">work</span>
                     </div>
@@ -1548,7 +1742,7 @@ class TestDemoClass:
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">10.7k</span>
+            <span class="white-color">11.7k</span>
             
 
             <br>
