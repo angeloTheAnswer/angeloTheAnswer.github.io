@@ -76,7 +76,7 @@ allure --version
 ```
 ***注意：dos可以验证成功但是pycharm验证失败需重启pycharm***
 
-#### jpype测试报告安装
+#### jpype安装
 *概述：JPype 是一个能够让 python 代码方便地调用 Java 代码的工具*
 1、下载whl包JPype1-1.1.2-cp37-cp37m-win32.whl  
 下载地址：https://www.lfd.uci.edu/~gohlke/pythonlibs/  
@@ -515,8 +515,247 @@ class TestDemoClass:
 ```
 
 #### 断言
-assert
 
+##### 什么是断言：
+每条case的通过与否都是通过拿实际的测试结果与预期结果进行比较，这比较的过程就是断言。
+
+##### Pytest断言
+pytest是使用Python自带的关键字assert来断言的。    
+
+##### assert使用方法
+assert关键字后面可以跟一个表达式，只要是表达式结果为True ，断言通过，用例执行成功，否则执行失败。
+
+##### 断言方式
+
+###### 比较大小与是否相等
+
+**assert a == b：判断a等于b**
+**assert a != b：判断a不等于b**
+**assert a < b：判断小于b**
+
+示例
+```sh
+import pytest
+class TestDemoClass:
+	@pytest.mark.smoke1
+	def test_01_case1(self):
+		print('\n测试用例1')
+		assert 1==1,'断言:是否相等'
+	@pytest.mark.smoke2
+	def test_02_case2(self):
+		print('\n测试用例2')
+		assert 1!=1,'断言:是否不相等'
+	def test_03_case3(self):
+		print('\n测试用例3')
+		assert 1<2,'断言:大小'	
+	def test_04_case4(self):
+		print('\n测试用例4')
+		assert 1>2,'断言:大小'
+```
+控制台输出
+```sh
+collected 4 items
+
+testcase/test_demo.py::TestDemoClass::test_01_case1
+测试用例1
+PASSED
+testcase/test_demo.py::TestDemoClass::test_02_case2
+测试用例2
+FAILED
+testcase/test_demo.py::TestDemoClass::test_03_case3
+测试用例3
+PASSED
+testcase/test_demo.py::TestDemoClass::test_04_case4
+测试用例4
+FAILED
+```
+
+###### 判断包含或不包含
+
+**assert a in b：判断b包含a**
+**assert a not in b：判断b不包含a**
+
+示例
+```sh
+import pytest
+class TestDemoClass:
+	@pytest.mark.smoke1
+	def test_01_case1(self):
+		print('\n测试用例1')
+		assert 1==1,'断言:是否相等'
+	@pytest.mark.smoke2
+	def test_02_case2(self):
+		print('\n测试用例2')
+		assert 1!=1,'断言:是否不相等'
+	def test_03_case3(self):
+		print('\n测试用例3')
+		assert 1<2,'断言:大小'	
+	def test_04_case4(self):
+		print('\n测试用例4')
+		assert 1>2,'断言:大小'	
+	def test_05_case4(self):
+		print('\n测试用例5')
+		assert 1 in [1,2],'断言:包含'
+	def test_06_case4(self):
+		print('\n测试用例6')
+		assert 1 not in [1,2],'断言:不包含'	
+```
+控制台输出
+```sh
+collected 6 items
+
+testcase/test_demo.py::TestDemoClass::test_01_case1
+测试用例1
+PASSED
+testcase/test_demo.py::TestDemoClass::test_02_case2
+测试用例2
+FAILED
+testcase/test_demo.py::TestDemoClass::test_03_case3
+测试用例3
+PASSED
+testcase/test_demo.py::TestDemoClass::test_04_case4
+测试用例4
+FAILED
+testcase/test_demo.py::TestDemoClass::test_05_case4
+测试用例5
+PASSED
+testcase/test_demo.py::TestDemoClass::test_06_case4
+测试用例6
+FAILED
+```
+###### 对类型的判断
+
+**assert isinstance(a,int)：判断a是否是int类型数据**
+示例
+
+```sh
+import pytest
+class TestDemoClass:
+	@pytest.mark.smoke1
+	def test_01_case1(self):
+		print('\n测试用例1')
+		assert 1==1,'断言:是否相等'
+	@pytest.mark.smoke2
+	def test_02_case2(self):
+		print('\n测试用例2')
+		assert 1!=1,'断言:是否不相等'
+	def test_03_case3(self):
+		print('\n测试用例3')
+		assert 1<2,'断言:大小'	
+	def test_04_case4(self):
+		print('\n测试用例4')
+		assert 1>2,'断言:大小'	
+	def test_05_case4(self):
+		print('\n测试用例5')
+		assert 1 in [1,2],'断言:包含'
+	def test_06_case4(self):
+		print('\n测试用例6')
+		assert 1 not in [1,2],'断言:不包含'	
+	def test_07_case4(self):
+		print('\n测试用例7')
+		assert isinstance(1,int),'断言:是否是int类型'
+```
+
+控制台输出
+```sh
+collected 7 items
+
+testcase/test_demo.py::TestDemoClass::test_01_case1
+测试用例1
+PASSED
+testcase/test_demo.py::TestDemoClass::test_02_case2
+测试用例2
+FAILED
+testcase/test_demo.py::TestDemoClass::test_03_case3
+测试用例3
+PASSED
+testcase/test_demo.py::TestDemoClass::test_04_case4
+测试用例4
+FAILED
+testcase/test_demo.py::TestDemoClass::test_05_case4
+测试用例5
+PASSED
+testcase/test_demo.py::TestDemoClass::test_06_case4
+测试用例6
+FAILED
+testcase/test_demo.py::TestDemoClass::test_07_case4
+测试用例7
+PASSED
+```
+
+###### 判断方法或者函数的返回值是否为真
+
+**assert xx：判断xx结果为真**
+**assert not xx：判断xx结果不为真**
+
+示例
+
+```sh
+import pytest
+class TestDemoClass:
+	@pytest.mark.smoke1
+	def test_01_case1(self):
+		print('\n测试用例1')
+		assert 1==1,'断言:是否相等'
+	@pytest.mark.smoke2
+	def test_02_case2(self):
+		print('\n测试用例2')
+		assert 1!=1,'断言:是否不相等'
+	def test_03_case3(self):
+		print('\n测试用例3')
+		assert 1<2,'断言:大小'	
+	def test_04_case4(self):
+		print('\n测试用例4')
+		assert 1>2,'断言:大小'	
+	def test_05_case4(self):
+		print('\n测试用例5')
+		assert 1 in [1,2],'断言:包含'
+	def test_06_case4(self):
+		print('\n测试用例6')
+		assert 1 not in [1,2],'断言:不包含'	
+	def test_07_case4(self):
+		print('\n测试用例7')
+		assert isinstance(1,int),'断言:是否是int类型'		
+	def test_08_case4(self):
+		print('\n测试用例8')
+		assert True,'断言:是否为真'		
+	def test_09_case4(self):
+		print('\n测试用例9')
+		assert not True,'断言:是否不为真'	
+```
+
+控制台输出
+```sh
+collected 9 items
+
+testcase/test_demo.py::TestDemoClass::test_01_case1
+测试用例1
+PASSED
+testcase/test_demo.py::TestDemoClass::test_02_case2
+测试用例2
+FAILED
+testcase/test_demo.py::TestDemoClass::test_03_case3
+测试用例3
+PASSED
+testcase/test_demo.py::TestDemoClass::test_04_case4
+测试用例4
+FAILED
+testcase/test_demo.py::TestDemoClass::test_05_case4
+测试用例5
+PASSED
+testcase/test_demo.py::TestDemoClass::test_06_case4
+测试用例6
+FAILED
+testcase/test_demo.py::TestDemoClass::test_07_case4
+测试用例7
+PASSED
+testcase/test_demo.py::TestDemoClass::test_08_case4
+测试用例8
+PASSED
+testcase/test_demo.py::TestDemoClass::test_09_case4
+测试用例9
+PASSED
+```
 
 #### allure 报告
 
@@ -526,3 +765,5 @@ critical：严重缺陷（功能点缺失）
 normal： 一般缺陷（边界情况，格式错误）
 minor：次要缺陷（界面错误与ui需求不符）
 trivial： 轻微缺陷（必须项无提示，或者提示不规范）
+
+**持续更新中**
